@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru" xmlns="http://www.w3.org/1999/html">
+<html lang="ru">
 <head>
   <meta charset="utf-8">
   <title>Форма отзыва</title>
@@ -8,7 +8,7 @@
 <header class="page-header">
   <a class="page-header__logo">
     <img class="page-header__logo-image" src="http://placehold.it/102x83"
-          width="102" height="83" alt="Седона">
+         width="102" height="83" alt="Седона">
   </a>
   <nav class="main-nav">
     <button class="main-nav__open-menu" type="button">Открыть меню</button>
@@ -28,16 +28,15 @@
         </li>
       </ul>
     </div>
-    <button class="main-nav__close-menu" type="button">Закрыть меню</button>
   </nav>
 </header>
 
 <main class="page-main">
 
-  <section class="main-image">
+  <div class="main-image">
     <img class="main-image__text" src="http://placehold.it/320x389"
-          width="320" height="389" alt="Седона">
-  </section>
+         width="320" height="389" alt="Седона">
+  </div>
 
   <section class="intro">
     <h1 class="intro__title">Оставьте свой отзыв</h1>
@@ -46,32 +45,30 @@
       достопримечательностях</p>
   </section>
 
-  <section class="form">
+  <section class="feedback">
+    <h2 class="visually-hidden">Заполните форму отзыва</h2>
     <div class="form__wrapper">
       <form action="https://echo.htmlacademy.ru" method="post">
         <fieldset class="name">
           <legend>Представьтесь:</legend>
-          <label for="name">Имя</label><br>
-          <input type="text" id="name" name="name" placeholder="Петр" tabindex="1" autocomplete="off" autofocus
-                  required>
-          <br>
-          <label for="surname">Фамилия</label><br>
-          <input type="text" id="surname" name="surname" placeholder="Иванов" tabindex="2" autocomplete="off" required>
-          <br>
-          <label for="patronymic">Отчество</label><br>
+          <label for="name">Имя</label>
+          <input type="text" id="name" name="name" placeholder="Петр" autocomplete="off" autofocus
+                 required>
+          <label for="surname">Фамилия</label>
+          <input type="text" id="surname" name="surname" placeholder="Иванов" autocomplete="off" required>
+          <label for="patronymic">Отчество</label>
           <input type="text" id="patronymic" name="patronymic" placeholder="Александрович" autocomplete="off"
-                  tabindex="3">
+                 tabindex="3">
         </fieldset>
 
         <fieldset class="contact">
           <legend>Контактная информация</legend>
-          <label for="tel">Контактный телефон<sup>*</sup>:</label><br>
+          <label for="tel">Контактный телефон<sup>*</sup>:</label>
           <input type="tel" id="tel" name="tel" placeholder="Введите телефон"
-                  autocomplete="off" tabindex="4" required>
-          <br>
-          <label for="e-mail">Электронная почта<sup>*</sup>:</label><br>
+                 autocomplete="off" required>
+          <label for="e-mail">Электронная почта<sup>*</sup>:</label>
           <input type="email" id="e-mail" name="email" placeholder="Введите e-mail"
-                  autocomplete="off" tabindex="5" required>
+                 autocomplete="off" required>
         </fieldset>
 
         <fieldset class="impression">
@@ -80,12 +77,10 @@
             <input type="radio" name="impression" value="good" checked>
             Скорее положительное
           </label>
-          <br>
           <label>
             <input type="radio" name="impression" value="bad">
             Скорее отрицательное
           </label>
-          <br>
           <label>
             <input type="radio" name="impression" value="unknown">
             Затрудняюсь ответить
@@ -98,35 +93,46 @@
             <input type="checkbox" name="bridge" checked>
             Мост Дьявола
           </label>
-          <br>
           <label>
             <input type="checkbox" name="park" checked>
             Слайд-парк
           </label>
-          <br>
           <label>
             <input type="checkbox" name="mountain">
             Гора-Колокол
           </label>
-          <br>
           <label>
             <input type="checkbox" name="rock" checked>
             Красные скалы
           </label>
         </fieldset>
 
-        <label for="comment">Опишите свои эмоции:</label><br>
-    <textarea name="comment" id="comment" rows="10"
-              placeholder="Опишите подробно все свои эмоции" tabindex="6"></textarea>
-        <br>
-        <input type="submit" value="Отправить отзыв">
+        <label for="comment">Опишите свои эмоции:</label>
+           <textarea name="comment" id="comment" rows="10"
+                     placeholder="Опишите подробно все свои эмоции" tabindex="6"></textarea>
 
+        <input type="submit" value="Отправить отзыв">
       </form>
+
+      <div class="modal-error">
+        <b class="modal-error__title">Что-то пошло не так!</b>
+        <p class="modal-error__subtitle">Проверьте поля, выделенные красным,
+          скорее всего вы забыли их заполнить</p>
+        <a class="modal-error__close" href="#">Ок</a>
+      </div>
+
+      <div class="modal-correct">
+        <b class="modal-correct__title">Ваш отзыв отправлен!</b>
+        <p class="modal-correct__subtitle">Спасибо за&nbsp;Ваше участие, Ваш отзыв уже поступил
+          к&nbsp;нам. В&nbsp;ближайшее время мы&nbsp;опубликуем его на&nbsp;сайте.</p>
+        <a class="modal-correct__close" href="#">Закрыть окно</a>
+      </div>
+
     </div>
   </section>
 </main>
 
-<br><br>
+
 <footer class="page-footer">
   <div class="page-footer__wrapper">
     <b class="page-footer__hashtag">#visitsedona</b>
@@ -151,7 +157,7 @@
     <div class="page_footer__copyright copyright">
       <b class="copyright__text">Разработано</b>
       <a class="button copyright__link"
-          href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+         href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
     </div>
   </div>
 </footer>

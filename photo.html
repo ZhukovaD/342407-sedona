@@ -1,24 +1,24 @@
 <!DOCTYPE html>
-<html lang="ru" xmlns="http://www.w3.org/1999/html">
+<html lang="ru">
 <head>
   <meta charset="utf-8">
   <title>Фото и видео</title>
 </head>
 <body>
 <header class="page-header">
-  <a class ="page-header__logo">
+  <a class="page-header__logo">
     <img class="page-header__logo-image" src="http://placehold.it/102x83"
-          width="102" height="83" alt="Седона">
+         width="102" height="83" alt="Седона">
   </a>
   <nav class="main-nav">
     <button class="main-nav__open-menu" type="button">Открыть меню</button>
     <div class="main-nav__wrapper">
       <ul class="main-nav__list site-list">
-        <li class="site-list__item>
+        <li class="site-list__item">
           <a href="index.html">Главная</a>
         </li>
-        <li class="site-list__item site-list__item--active"">
-        <a href="photo.html">Фото и видео</a>
+        <li class="site-list__item site-list__item--active">
+          <a href="photo.html">Фото и видео</a>
         </li>
         <li class="site-list__item">
           <a href="form.html">Форма отзыва</a>
@@ -28,16 +28,15 @@
         </li>
       </ul>
     </div>
-    <button class="main-nav__close-menu" type="button">Закрыть меню</button>
   </nav>
 </header>
 
 <main class="page-main">
 
-  <section class="main-image">
+  <div class="main-image">
     <img class="main-image__text" src="http://placehold.it/320x389"
-          width="320" height="389" alt="Седона">
-  </section>
+         width="320" height="389" alt="Седона">
+  </div>
 
   <section class="intro">
     <h1 class="intro__title">Фото и видео</h1>
@@ -46,64 +45,66 @@
       и&nbsp;экономике</p>
   </section>
 
-  <section class="gallary">
-    <figure class="gallary__photo photo-boris">
-      <img class="photo-boris__img" src="http://placehold.it/280x280"
-            width="280" height="280" alt="Народные просторы">
+  <section class="photo">
+    <h2 class="visually-hidden">Красочные фотографии Седоны</h2>
+    <figure class="photo__item">
+      <img class="photo__img" src="http://placehold.it/280x280"
+           width="280" height="280" alt="Народные просторы">
       <figcaption>
-        <b class="photo-boris__title">Народные просторы</b>
-        <p class="photo-boris__author">Автор фото: Борис</p>
+        <b class="photo__title">Народные просторы</b>
+        <p class="photo__author">Автор фото: Борис</p>
       </figcaption>
-      <button class="photo-boris__like" type="button"><img src="http://placehold.it/23x21"></button>
-      <span class="photo-boris__sum">1350</span>
     </figure>
+    <button class="photo__like" type="button">Лайкнуть</button>
+    <span class="photo__sum">1350</span>
 
-    <figure class="gallary__photo photo-sergei">
-      <img class="photo-sergei__img" src="http://placehold.it/280x280"
-            width="280" height="280" alt="Местная растительность">
+    <figure class="photo__item">
+      <img class="photo__img" src="http://placehold.it/280x280"
+           width="280" height="280" alt="Местная растительность">
       <figcaption>
-        <b class="photo-sergei__title">Местная растительность</b>
-        <p class="photo-sergei__author">Автор фото: Сергей</p>
+        <b class="photo__title">Местная растительность</b>
+        <p class="photo__author">Автор фото: Сергей</p>
       </figcaption>
-      <button class="photo-sergei__like" type="button"><img src="http://placehold.it/23x21"></button>
-      <span class="photo-sergei__sum">143</span>
     </figure>
+    <button class="photo__like" type="button">Лайкнуть</button>
+    <span class="photo__sum">143</span>
 
-    <figure class="gallary__photo photo-petr">
-      <img class="photo-petr__img" src="http://placehold.it/280x280"
-            width="280" height="280" alt="Дорога на север">
+    <figure class="photo__item">
+      <img class="photo__img" src="http://placehold.it/280x280"
+           width="280" height="280" alt="Дорога на север">
       <figcaption>
-        <b class="photo-petr__title">Дорога на север</b>
-        <p class="photo-petr__author">Автор фото: Петр</p>
+        <b class="photo__title">Дорога на север</b>
+        <p class="photo__author">Автор фото: Петр</p>
       </figcaption>
-      <button class="photo-petr__like" type="button"><img src="http://placehold.it/23x21"></button>
-      <span class="photo-petr__sum">96</span>
     </figure>
+    <button class="photo__like" type="button">Лайкнуть</button>
+    <span class="photo__sum">96</span>
 
-    <figure class="gallary__photo photo-anton">
-      <img class="photo-anton__img" src="http://placehold.it/280x280"
-            width="280" height="280" alt="Мост дьявола">
+    <figure class="photo__item">
+      <img class="photo__img" src="http://placehold.it/280x280"
+           width="280" height="280" alt="Мост дьявола">
       <figcaption>
-        <b class="photo-anton__title">Мост дьявола</b>
-        <p class="photo-anton__author">Автор фото: Антон</p>
+        <b class="photo__title">Мост дьявола</b>
+        <p class="photo__author">Автор фото: Антон</p>
       </figcaption>
-      <button class="photo-anton__like" type="button"><img src="http://placehold.it/23x21"></button>
-      <span class="photo-anton__sum">254</span>
     </figure>
+    <button class="photo__like" type="button">Лайкнуть</button>
+    <span class="photo__sum">254</span>
   </section>
 
   <section class="video">
+    <h2 class="visually-hidden">Видеопрезентация о Седоне</h2>
     <header class="video__header">
       <b class="video__title">Все еще сомневаетесь?</b>
       <p class="video__subtitle">Смотрите видеопрезентацию и&nbsp;скорее
         за&nbsp;билетами, пока они не&nbsp;подорожали в&nbsp;очередной раз!</p>
     </header>
     <video class="video__video-pleer" width="320" height="201" controls preload="metadata"
-            src="http://placehold.it/320x201" poster="http://placehold.it/320x201"></video>
+           src="http://placehold.it/320x201" poster="http://placehold.it/320x201"></video>
   </section>
 
 </main>
-<br><br>
+
 <footer class="page-footer">
   <div class="page-footer__wrapper">
     <b class="page-footer__hashtag">#visitsedona</b>
@@ -128,7 +129,7 @@
     <div class="page_footer__copyright copyright">
       <b class="copyright__text">Разработано</b>
       <a class="button copyright__link"
-          href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+         href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
     </div>
   </div>
 </footer>
