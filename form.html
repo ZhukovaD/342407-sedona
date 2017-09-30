@@ -59,12 +59,12 @@
             <legend>Представьтесь:</legend>
             <label><span class="form-person__label">Имя<sup>*</sup>:</span>
               <input class="form-person__input form-person__input--name" type="text" name="name" placeholder="Петр"
-                     autocomplete="off" autofocus
-                     required>
+                     autocomplete="off" autofocus required>
             </label>
 
             <label><span class="form-person__label">Фамилия<sup>*</sup>:</span>
-              <input class="form-person__input form-person__input--surname" type="text" name="surname" placeholder="Иванов"
+              <input class="form-person__input form-person__input--surname" type="text" name="surname"
+                     placeholder="Иванов"
                      autocomplete="off" required>
             </label>
 
@@ -79,10 +79,12 @@
           <fieldset class="feedback__fieldset form-contact">
             <legend>Контактная информация:</legend>
             <label><span class="form-contact__label">Контактный телефон<sup>*</sup>:</span>
-            <input class="form-contacts__input form-contacts__input--tel" type="tel" name="tel" placeholder="Введите телефон" autocomplete="off" required>
-              </label>
+              <input class="form-contacts__input form-contacts__input--tel" type="tel" name="tel"
+                     placeholder="Введите телефон" autocomplete="off" required>
+            </label>
             <label><span class="form-contact__label">Электронная почта<sup>*</sup>:</span>
-            <input class="form-contacts__input form-contacts__input--email" type="email" name="email" placeholder="Введите e-mail" autocomplete="off" required>
+              <input class="form-contacts__input form-contacts__input--email" type="email" name="email"
+                     placeholder="Введите e-mail" autocomplete="off" required>
             </label>
           </fieldset>
         </div>
@@ -134,10 +136,11 @@
           </fieldset>
         </div>
 
-    <fieldset>
-       <legend>Опишите свои эмоции:</legend>
-        <textarea class="text-area__area" name="comment" rows="10" placeholder="Опишите подробно все свои восторги"></textarea>
-    </fieldset>
+        <fieldset>
+          <legend>Опишите свои эмоции:</legend>
+          <textarea class="text-area__area" name="comment" rows="10"
+                    placeholder="Опишите подробно все свои восторги"></textarea>
+        </fieldset>
         <input class="button feedback-button" type="submit" value="Отправить отзыв">
       </form>
 
