@@ -52,10 +52,10 @@
   <section class="feedback">
     <h2 class="visually-hidden">Заполните форму отзыва</h2>
     <div class="feedback__wrapper">
-      <form action="https://echo.htmlacademy.ru" method="post">
+      <form class="feedback__form" action="https://echo.htmlacademy.ru" method="post">
         <div class="feedback__box">
           <fieldset class="feedback__fieldset form-person">
-            <legend>Представьтесь:</legend>
+            <legend class="feedback__legend">Представьтесь:</legend>
             <label><span class="form-person__label">Имя<sup>*</sup>:</span>
               <input class="form-person__input form-person__input--name" type="text" name="name" placeholder="Петр" autocomplete="off" autofocus required>
             </label>
@@ -72,7 +72,7 @@
 
         <div class="feedback__box">
           <fieldset class="feedback__fieldset form-contact">
-            <legend>Контактная информация:</legend>
+            <legend class="feedback__legend">Контактная информация:</legend>
             <label><span class="form-contact__label">Контактный телефон<sup>*</sup>:</span>
               <input class="form-contacts__input form-contacts__input--tel" type="tel" name="tel" placeholder="Введите телефон" autocomplete="off" required>
             </label>
@@ -83,8 +83,8 @@
         </div>
 
         <div class="feedback__box">
-          <fieldset class="feedback__impression form-impression">
-            <legend>Ваше общее впечатление</legend>
+          <fieldset class="feedback__fieldset form-impression">
+            <legend class="feedback__legend">Ваше общее впечатление</legend>
             <label class="form-impression__item">
               <input class="form-impression__radio" type="radio" name="impression" value="good" checked>
               <span class="radio-custom"></span>
@@ -104,37 +104,37 @@
         </div>
 
         <div class="feedback__box">
-          <fieldset class="feedback__attractions form-attractions">
-            <legend>Посещенные достопримечательности:</legend>
+          <fieldset class="feedback__fieldset form-attractions">
+            <legend class="feedback__legend">Посещенные достопримечательности:</legend>
             <label class="form-attractions__item">
-              <input class="form-attractions__checkbox" type="checkbox" name="bridge" checked>
+              <input class="form-attractions__checkbox visually-hidden" type="checkbox" name="bridge" checked>
               <span class="checkbox-custom"></span>
               <span class="form-attractions__label">Мост Дьявола</span>
             </label>
             <label class="form-attractions__item">
-              <input class="form-attractions__checkbox" type="checkbox" name="park" checked>
+              <input class="form-attractions__checkbox visually-hidden" type="checkbox" name="park" checked>
               <span class="checkbox-custom"></span>
               <span class="form-attractions__label">Слайд-парк</span>
             </label>
             <label class="form-attractions__item">
-              <input class="form-attractions__checkbox" type="checkbox" name="mountain">
+              <input class="form-attractions__checkbox visually-hidden" type="checkbox" name="mountain">
               <span class="checkbox-custom"></span>
               <span class="form-attractions__label">Гора-Колокол</span>
             </label>
             <label class="form-attractions__item">
-              <input class="form-attractions__checkbox" type="checkbox" name="rock" checked>
+              <input class="form-attractions__checkbox visually-hidden" type="checkbox" name="rock" checked>
               <span class="checkbox-custom"></span>
               <span class="form-attractions__label">Красные скалы</span>
             </label>
           </fieldset>
         </div>
 
-        <fieldset>
-          <legend>Опишите свои эмоции:</legend>
-          <textarea class="text-area__area" name="comment" rows="10"
+        <fieldset class="feedback__fieldset">
+          <legend class="feedback__legend">Опишите свои эмоции:</legend>
+          <textarea class="feedback__text-area" name="comment" rows="10"
                     placeholder="Опишите подробно все свои восторги"></textarea>
         </fieldset>
-        <input class="button feedback-button" type="submit" value="Отправить отзыв">
+        <input class="feedback-button button" type="submit" value="Отправить отзыв">
       </form>
 
       <div class="modal-error visually-hidden">

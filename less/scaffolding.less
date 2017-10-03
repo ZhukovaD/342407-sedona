@@ -3,9 +3,10 @@ body {
   margin: 0;
   font-family: @base-font;
   font-size: @text-small;
+  font-weight: normal;
   line-height: 26px;
   font-style: normal;
-  //background-image: url("/img/sedona-form-mobile.jpg");
+  //background-image: url("/img/sedona-index-mobile.jpg");
   background-repeat: no-repeat;
 }
 
@@ -15,24 +16,13 @@ img {
 }
 
 .visually-hidden {
-  display: none;
+  position: absolute;
+  margin: -1px;
+  padding: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  border: 0;
 }
 
-.button {
-  background-color: @base-color;
-  color: #ffffff;
-  text-decoration: none;
-  text-align: center;
-  display: block;
-  width: 240px;
-  margin: auto;
-  cursor: pointer;
-}
-
-.button:hover {
-  background-color: @color-hover;
-}
-
-.button:active {
-  background-color: @color-active;
-}

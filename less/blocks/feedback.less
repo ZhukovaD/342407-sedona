@@ -1,4 +1,4 @@
-form {
+.feedback__form {
   margin: 0 auto;
   margin-bottom: 39px;
   background-color: #ffffff;
@@ -8,14 +8,14 @@ form {
   border-bottom: @border;
 }
 
-fieldset {
+.feedback__fieldset {
   width: 280px;
   margin: 0 auto;
   border: none;
 }
 
-fieldset legend {
-  font-family: @base-font-bold;
+.feedback__legend {
+  font-weight: bold;
   font-size: @text-big;
   text-transform: uppercase;
   text-align: center;
@@ -23,25 +23,11 @@ fieldset legend {
   padding-bottom: 13px;
 }
 
-label {
-  display: inline-block;
-}
-
-input {
-  height: 45px;
-  font-family: @base-font-bold;
-  font-size: @text-big;
-  padding: 10px;
-  padding-left: 20px;
-  border: none;
-  background-color: @light-gray;
-}
-
-textarea {
-  height: 140px;
+.feedback__text-area{
+  min-height: 140px;
   width: 280px;
   border: none;
-  font-family: @base-font-bold;
+  font-weight: bold;
   font-size: @text-big;
   padding: 15px;
   padding-left: 20px;
@@ -51,7 +37,7 @@ textarea {
 
 .feedback-button {
   width: 280px;
-  height: 57px;
+  min-height: 57px;
   text-transform: uppercase;
   padding: 10px;
 }

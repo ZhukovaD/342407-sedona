@@ -1,88 +1,92 @@
-//ul li {
-//  display: inline-block;
-//  width: 100%;
-//}
-.advantages-list {
+.advantages__list {
   .all-lists;
 }
 
-.advantages-list__header {
-  margin: 0 20px;
-  padding-top: 41px;
-  padding-bottom: 33px;
-  border-bottom: solid 1px rgb(206, 206, 206);
-}
-
-.advantages-list__header--noborder {
-  border: none;
-}
-
-.advantages-list__header--no-content {
-  padding-top: 19px;
-  padding-bottom: 25px;
-}
-
-.advantages-list__item {
+.advantages__item {
+  font-family: @base-font;
   list-style: none;
   text-transform: uppercase;
   background-color: rgb(234, 234, 234);
 }
 
-.advantages-list__item--content {
+//ГОЛУБЫЕ БЛОКИ
+
+.content-item {
   background-color: @base-color;
   color: #ffffff;
-  border-bottom: none;
 }
 
-.advantages-list__item--content h3 {
-  color: #ffffff;
+.content-item__header {
+  margin: 0 20px;
+  padding-top: 42px;
+  padding-bottom: 39px;
+  text-align: center;
+}
+
+.content-item__title {
   margin: 0;
-  padding: 0;
-}
-
-.advantages-list__item--content p {
-  color: #ffffff;
-  margin: 0;
-  padding-top: 7px;
-  padding-bottom: 5px;
-}
-
-.advantages-list__title {
-  font-family: @base-font-bold;
+  font-weight: bold;
   font-size: @text-big;
-  text-align: center;
-  color: #000000;
-  margin: 0;
-  padding-top: 6px;
-  padding-bottom: 7px;
 }
 
-.advantages-list__number {
-  font-size: @text-small;
-  text-align: center;
-  color: #333333;
+.content-item__number {
   margin: 0;
-  padding-bottom: 13px;
+  padding: 7px;
 }
 
-.advantages-list__description {
-  font-size: @text-small;
-  text-align: center;
-  color: #333333;
+.content-item__description {
   margin: 0;
-  line-height: 22px;
+  padding-top: 5px;
+  line-height: 21px;
 }
 
-.advantages-list__image {
+.content-item__image {
   margin: 0;
-  height: 260px;
+  min-height: 260px;
   width: 320px;
 }
 
-.advantages-list__image--city {
+.content-item__image--city {
   background: url("../img/main-city-mobile@1x.jpg") no-repeat;
 }
 
-.advantages-list__image--bridge {
+.content-item__image--bridge {
   background: url("../img/main-bridge-mobile@1x.jpg") no-repeat;
+}
+
+//СЕРЫЕ БЛОКИ
+
+.no-content-item {
+  background-color: @light-gray;
+}
+
+.no-content-item__header {
+  margin: 0 20px;
+  padding-top: 28px;
+  padding-bottom: 26px;
+  text-align: center;
+  border-bottom: solid 1px rgb(206, 206, 206);
+}
+
+.no-content-item__title {
+  margin: 0;
+  font-weight: bold;
+  font-size: @text-big;
+}
+
+.no-content-item__number {
+  margin: 0;
+  padding: 7px;
+  color: #333333;
+}
+
+.no-content-item__description {
+  margin: 0;
+  padding-top: 5px;
+  line-height: 21px;
+  color: #333333;
+}
+
+.no-content-item__header--noborder {
+  border: none;
 }
