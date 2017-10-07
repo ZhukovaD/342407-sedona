@@ -1,0 +1,121 @@
+.form-check {
+  margin-bottom: 30px;
+}
+
+.form-check__label {
+  font-weight: bold;
+  font-size: @text-big;
+  text-transform: none;
+}
+
+.form-check__item {
+  display: inline-block;
+  margin-bottom: 22px;
+}
+
+.form-check__item:last-child {
+  margin-bottom: 0;
+}
+
+//Стилизация псевдоэлемента - чекбокса
+.checkbox-custom {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 23px;
+  width: 53px;
+  height: 53px;
+  background-color: @light-gray;
+  position: relative;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.form-check__checkbox:checked + .checkbox-custom::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  bottom: 10px;
+  left: 10px;
+  background: url("../img/icon-tick.svg") 50% 50% no-repeat;
+}
+
+@media (min-width: @tablet-width) {
+  .form-check {
+    width: calc(@tablet-width - 120px);
+    margin-top: 20px;
+    margin-bottom: 0;
+    border-top: @border;
+  }
+
+  .feedback__legend--form-check {
+    margin: 0 120px;
+    padding: 0;
+    margin-bottom: 6px;
+  }
+
+  .form-check__item-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    width: 540px;
+    margin: 15px auto;
+    margin-bottom: 0;
+  }
+
+  .form-check__item {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    margin-left: 55px;
+  }
+
+  .form-check__item--1 {
+    order: -3;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 40px;
+    margin-left: 35px;
+  }
+
+  .form-check__item--2 {
+    order: -1;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 40px;
+    margin-left: 35px;
+  }
+
+  .form-check__item--3 {
+    order: -2;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 40px;
+    margin-left: 35px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form-check {
+    width: calc(1120px - 220px);
+    margin-top: 35px;
+    margin-bottom: 0;
+    border-top: @border;
+  }
+
+  .feedback__legend--form-check {
+    margin: 0 300px;
+  }
+
+  .form-check__item-wrapper {
+    display: flex;
+    flex-wrap: no-wrap;
+    width: inherit;
+    margin: 40px 0;
+    justify-content: space-between;
+  }
+
+  .form-check__item {
+    margin: 0;
+  }
+}

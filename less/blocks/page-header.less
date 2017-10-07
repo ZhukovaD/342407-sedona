@@ -1,16 +1,28 @@
 .page-header {
   width: 320px;
-  padding: 0;
-}
-
-.page-header__menu {
-  height: 55px;
-  background-color: #ffffff;
-  box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.2);
+  margin: 0 auto;
+  text-align: center;
+  height: 279px;
+  background: #ffffff;
 }
 
 .page-header__logo-image {
-  display: block;
-  width: 102px;
-  margin: 0 auto;
+  margin-left: 57px;
+}
+
+@media (min-width: @tablet-width) {
+  .page-header {
+    width: @tablet-width;
+    height: 50px;
+  }
+
+  .page-header__logo {
+    display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header {
+    width: 1120px;
+  }
 }

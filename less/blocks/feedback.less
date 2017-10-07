@@ -1,16 +1,22 @@
-.feedback__form {
+.feedback {
+  min-width: 320px;
   margin: 0 auto;
-  margin-bottom: 39px;
-  background-color: #ffffff;
+  //background-color: #ffffff;
 }
 
 .feedback__box {
   border-bottom: @border;
 }
 
+.feedback__box--textarea {
+  border-bottom: none;
+}
+
 .feedback__fieldset {
   width: 280px;
   margin: 0 auto;
+  margin-bottom: 5px;
+  padding: 0;
   border: none;
 }
 
@@ -19,20 +25,7 @@
   font-size: @text-big;
   text-transform: uppercase;
   text-align: center;
-  padding-top: 16px;
-  padding-bottom: 13px;
-}
-
-.feedback__text-area {
-  min-height: 140px;
-  width: 280px;
-  border: none;
-  font-weight: bold;
-  font-size: @text-big;
-  padding: 15px;
-  padding-left: 20px;
-  background-color: @light-gray;
-  margin-bottom: 24px;
+  padding: 20px;
 }
 
 .feedback-button {
@@ -58,4 +51,99 @@
 /* Firefox 18- */
 :-ms-input-placeholder {
   color: #000000;
+}
+
+.feedback__pole {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .feedback {
+    width: calc(@tablet-width - 120px);
+    margin: 0 auto;
+  }
+
+  .feedback__wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .feedback__box {
+    border-bottom: none;
+    padding-top: 20px;
+  }
+
+  .feedback__box--radio {
+    order: -20;
+  }
+
+  .feedback__legend {
+    font-size: calc(@text-biggest * 1.05);
+  }
+
+  .feedback__legend--form-radio {
+    text-align: left;
+    padding: 21px 0 62px 0;
+  }
+
+  .feedback__legend--form-person {
+    text-align: left;
+    padding: 21px 0 56px 0;
+  }
+
+  .button__wrapper {
+    display: flex;
+    width: 100%;
+    margin: 50px auto;
+    margin-bottom: 60px;
+    justify-content: space-between;
+  }
+
+  .feedback-button {
+    width: 325px;
+    min-height: 57px;
+    text-transform: uppercase;
+    padding: 10px;
+    margin: 0;
+  }
+
+  .feedback__pole {
+    display: block;
+    font-family: @base-font;
+    font-size: @text-small;
+    text-transform: uppercase;
+    margin-top: 20px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .feedback {
+    width: calc(1120px - 220px);
+    margin: 0 auto;
+  }
+
+  .feedback__box {
+    padding-top: 0;
+  }
+
+  .feedback__box--contact {
+    margin-top: 13px;
+  }
+
+  .button__wrapper {
+    margin-bottom: 55px;
+  }
+
+  .feedback-button {
+    width: 450px;
+    height: 20px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .feedback__pole {
+    margin-top: 13px;
+  }
 }

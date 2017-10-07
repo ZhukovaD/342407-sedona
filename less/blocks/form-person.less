@@ -5,25 +5,84 @@
 }
 
 .form-person__input {
-  margin-bottom: 12px;
+  padding: 7px;
+  padding-left: 20px;
+  margin-bottom: 19px;
   margin-left: 11px;
   min-height: 45px;
   font-weight: bold;
   font-size: @text-big;
-  padding: 10px;
-  padding-left: 20px;
   border: none;
   background-color: @light-gray;
 }
 
 .form-person__input--name {
-  width: 71%;
+  width: 72%;
 }
 
 .form-person__input--surname {
-  width: 57%;
+  width: 59%;
 }
 
 .form-person__input--patronymic {
-  width: 59%;
+  width: 60%;
+}
+
+@media (min-width: @tablet-width) {
+  .form-person {
+    //Высчитывается ширина контейнера: ((внутренний контейнер) разделить пополам - левый отступ - рамку)
+    width: calc((@tablet-width - 120px) / 2 - 57px - 1px);
+    padding-left: 57px;
+    padding-top: 47px;
+    border-left: @border;
+  }
+
+  .feedback__legend--form-person {
+    padding: 0;
+    margin-bottom: 10px;
+  }
+
+  .form-person__input--name {
+    width: 70%;
+  }
+
+  .form-person__input--surname {
+    width: 57%;
+  }
+
+  .form-person__input--patronymic {
+    width: 58%;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form-person {
+    //Высчитывается ширина контейнера: ((внутренний контейнер) разделить пополам - левый отступ - рамку)
+    width: calc((1120px - 220px) / 2 - 72px - 1px);
+    padding-left: 72px;
+    padding-top: 47px;
+    border-left: @border;
+  }
+
+  .feedback__legend--form-person {
+    margin-bottom: 5px;
+  }
+
+  .form-person__input {
+    padding: 4px;
+    padding-left: 20px;
+    //background-color: rgba(233, 254, 222, 0.8);
+  }
+
+  .form-person__input--name {
+    width: 80%;
+  }
+
+  .form-person__input--surname {
+    width: 70%;
+  }
+
+  .form-person__input--patronymic {
+    width: 71%;
+  }
 }
