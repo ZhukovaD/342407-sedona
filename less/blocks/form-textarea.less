@@ -1,0 +1,50 @@
+.form-textarea {
+  margin-bottom: 45px;
+}
+
+.form-textarea__textarea {
+  height: 120px;
+  width: 240px;
+  border: none;
+  font-weight: bold;
+  font-size: @text-big;
+  padding: 20px;
+  line-height: 25px;
+  background-color: @light-gray;
+}
+
+@media (min-width: @tablet-width) {
+  .form-textarea {
+    width: calc(@tablet-width - 120px);
+    border-top: @border;
+    margin: 0;
+  }
+
+  .feedback__legend--form-textarea {
+    text-align: center;
+    padding-left: 65px;
+    padding-right: 65px;
+    margin-bottom: 40px;
+  }
+
+  .form-textarea__textarea {
+    height: 120px;
+    min-width: 94%;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form-textarea {
+    width: calc(1120px - 220px);
+  }
+
+  .feedback__legend--form-textarea {
+    margin-bottom: 30px;
+  }
+
+  .form-textarea__textarea {
+    height: 110px;
+    width: calc(1120px - 220px - 40px);
+    font-size: calc(@text-small * 1.05);
+  }
+}

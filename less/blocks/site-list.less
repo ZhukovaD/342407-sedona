@@ -1,10 +1,15 @@
 .site-list {
   .all-lists;
+  min-height: 210px;
   background-color: @base-color;
   font-size: @text-big;
   font-weight: bold;
   text-align: center;
   text-transform: uppercase;
+}
+
+.site-list__item--nodisplay {
+  display: none;
 }
 
 .site-list__item--active {
@@ -22,7 +27,7 @@
 .site-list__item a {
   display: block;
   vertical-align: middle;
-  padding: 13px;
+  padding: 14px;
   color: #ffffff;
   text-decoration: none;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
@@ -31,4 +36,65 @@
 
 .site-list__item a:active {
   color: rgba(255, 255, 255, 0.3);
+}
+
+@media (min-width: @tablet-width) {
+  .site-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    min-height: 50px;
+    font-size: @text-small;
+    background: none;
+  }
+
+  .site-list__item {
+    margin-top: 15px;
+    width: 110px;
+  }
+
+  .site-list__item--nodisplay {
+    display: block;
+    margin: 0;
+  }
+
+  .site-list__item--active {
+    background: none;
+  }
+
+  .site-list__item:hover {
+    background: none;
+  }
+
+  .site-list__item:active {
+    background: none;
+  }
+
+  .site-list__item a {
+    padding: 0;
+    border: none;
+    color: #000000;
+  }
+
+  .site-list__item a:hover {
+    color: @base-color;
+  }
+
+  .site-list__item a:active {
+    color: #000000;
+    opacity: 0.3;
+  }
+
+  .site-list__item--active a {
+    color: #766357;
+  }
+
+  .site-list__item--active a:hover {
+    color: #604e43;
+  }
+
+  .site-list__item--active a:active {
+    color: #766357;
+    opacity: 0.3;
+  }
 }

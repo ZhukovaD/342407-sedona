@@ -1,5 +1,6 @@
 .main-image {
   width: 320px;
+  margin: 0 auto;
   min-height: 390px;
   background: url("../img/bg-back-mobile@1x.jpg") no-repeat;
 }
@@ -24,4 +25,51 @@
   width: 229px;
   margin: 0 auto;
   padding-top: 70px;
+}
+
+@media (min-width: @tablet-width) {
+  .main-image {
+    width: @tablet-width;
+    min-height: 520px;
+    background-size: cover;
+  }
+
+  .main-image__text {
+    width: 458px;
+    margin: 0 auto;
+    padding-top: 78px;
+  }
+
+  .main-image--small {
+    min-height: 297px;
+  }
+
+  .main-image__text--small {
+    width: 460px;
+    padding-top: 100px;
+    margin: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-image {
+    width: 1120px;
+    min-height: 481px;
+    background-size: cover;
+  }
+
+  .main-image__text {
+    width: 435px;
+    margin: 0 auto;
+    padding-top: 80px;
+  }
+
+  .main-image--small {
+    min-height: 285px;
+  }
+
+  .main-image__text--small {
+    width: 430px;
+    padding-top: 100px;
+  }
 }

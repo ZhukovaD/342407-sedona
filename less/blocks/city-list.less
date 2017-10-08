@@ -4,8 +4,9 @@
   padding-left: 20px;
   padding-right: 20px;
   padding-top: 28px;
-  padding-bottom: 33px;
+  padding-bottom: 25px;
   width: 280px;
+  text-transform: uppercase;
 }
 
 .city-list__item {
@@ -27,10 +28,10 @@
   font-size: @text-big;
 }
 
-p.city-list__discription {
+.city-list__discription {
   margin: 0;
   padding-left: 50px;
-  line-height: 21px;
+  line-height: 20px;
   color: #333333;
 }
 
@@ -47,4 +48,68 @@ p.city-list__discription {
 .city-list__item--food {
   background: url("../img/icon-burger.svg") no-repeat;
   background-size: 39px 37px;
+}
+
+@media (min-width: @tablet-width) {
+  .city-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: @tablet-width;
+    min-height: 264px;
+    padding-top: 57px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    text-align: center;
+  }
+
+  .city-list__item {
+    margin-bottom: 0;
+  }
+
+  .city-list__title {
+    padding-top: 100px;
+    padding-bottom: 0;
+    padding-left: 0;
+    font-size: @text-biggest;
+  }
+
+  .city-list__discription {
+    padding: 20px;
+  }
+
+  .city-list__item--housing {
+    background-position: 50% 0%;
+    background-size: 90px 70px;
+  }
+
+  .city-list__item--souvenirs {
+    background-position: 50% 0%;
+    background-size: 90px 70px;
+    order: 10;
+  }
+
+  .city-list__item--food {
+    background-position: 50% 0%;
+    background-size: 90px 70px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .city-list {
+    width: 1120px;
+    margin: 0 auto;
+    min-height: 252px;
+    justify-content: space-around;
+  }
+
+  .city-list__title {
+    font-size: @text-big;
+    padding-top: 92px;
+  }
+
+  .city-list__discription {
+    padding: 20px 50px;
+  }
 }

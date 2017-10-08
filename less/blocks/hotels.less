@@ -1,7 +1,8 @@
 .hotels {
   text-transform: uppercase;
-  padding-top: 30px;
-  padding-bottom: 48px;
+  margin-top: 28px;
+  margin-bottom: 50px;
+  background-color: #ffffff;
 }
 
 .hotels__header {
@@ -33,4 +34,46 @@
   font-weight: bold;
   font-size: @text-biggest;
   padding: 17px;
+}
+
+@media (min-width: @tablet-width) {
+  .hotels {
+    margin-top: 56px;
+    margin-bottom: 55px;
+  }
+
+  .hotels__header {
+    margin-left: 180px;
+    margin-right: 180px;
+  }
+
+  .hotels__title {
+    font-size: calc(@text-biggest * 1.5);
+    margin-bottom: 32px;
+  }
+
+  .hotels__to-search {
+    margin-top: 42px;
+    width: 420px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .hotels {
+    margin-top: 56px;
+    margin-bottom: 33px;
+  }
+
+  .hotels__header {
+    margin-left: 180px;
+    margin-right: 180px;
+  }
+
+  .hotels__title {
+    margin-bottom: 27px;
+  }
+
+  .hotels__description {
+    padding: 0 200px;
+  }
 }
