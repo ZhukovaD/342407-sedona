@@ -1,0 +1,151 @@
+.modal {
+  display: block;
+  position: absolute;
+  width: 320px;
+  top: 885px;
+  text-align: center;
+  font-family: @base-font;
+  text-transform: uppercase;
+  background: #ffffff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  z-index: 10000;
+}
+
+.modal__title {
+  display: block;
+  font-size: @text-big;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 60px;
+  margin-bottom: 0;
+}
+
+.modal__subtitle {
+  padding-left: 45px;
+  padding-right: 45px;
+  padding-top: 15px;
+  padding-bottom: 7px;
+  line-height: 22px;
+}
+
+.modal__close {
+  padding: 16px;
+  width: 150px;
+  margin-bottom: 36px;
+}
+
+.modal--correct {
+  top: 1215px;
+}
+
+.modal--correct .modal__subtitle {
+  padding-bottom: 20px;
+}
+
+.modal__button-background {
+  width: 280px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: @light-gray;
+}
+
+.modal--correct .modal__close {
+  width: 250px;
+  margin: 0;
+}
+
+//.modal--correct{
+//  display: none;
+//}
+//.modal--error{
+//  display: none;
+//}
+
+@media (min-width: @tablet-width) {
+  .modal {
+    width: 400px;
+    top: 843px;
+    left: 122px;
+  }
+
+  .modal__title {
+    font-size: calc(@text-biggest * 1.5);
+    margin-left: 90px;
+    margin-right: 90px;
+    margin-top: 65px;
+    line-height: 40px;
+  }
+
+  .modal__subtitle {
+    padding-top: 9px;
+    line-height: 24px;
+  }
+
+  .modal__close {
+    padding: 16px;
+    width: 240px;
+    margin-top: 23px;
+    margin-bottom: 50px;
+  }
+
+  .modal--correct {
+    left: 0;
+    width: calc(@tablet-width - 123px);
+    top: 683px;
+  }
+
+  .modal--correct .modal__subtitle {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+
+  .modal__button-background {
+    width: calc(@tablet-width - 123px - 20px * 2);
+  }
+
+  .modal--correct .modal__close {
+    width: 430px;
+    margin: auto;
+    margin-top: 25px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .modal {
+    width: 375px;
+    top: 710px;
+    left: 260px;
+  }
+
+  .modal__title {
+    font-size: calc(@text-biggest * 1.4);
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-top: 55px;
+    line-height: 35px;
+  }
+
+  .modal__subtitle {
+    padding-top: 9px;
+    line-height: 24px;
+  }
+
+  .modal--correct {
+    left: 150px;
+    width: 600px;
+    top: 483px;
+  }
+
+  .modal--correct .modal__title {
+    margin-top: 30px;
+  }
+
+  .modal--correct .modal__subtitle {
+    padding-top: 6px;
+  }
+
+  .modal__button-background {
+    width: 560px;
+  }
+}

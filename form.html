@@ -2,6 +2,7 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Форма отзыва</title>
   <link href="css/style.css" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
@@ -158,19 +159,21 @@
         </div>
       </form>
 
-      <div class="modal-error visually-hidden">
-        <b class="modal-error__title">Что-то пошло не так!</b>
-        <p class="modal-error__subtitle">Проверьте поля, выделенные красным,
+      <div class="modal modal--error">
+        <b class="modal__title">Что-то пошло не так!</b>
+        <p class="modal__subtitle">Проверьте поля, выделенные красным,
           скорее всего вы забыли их заполнить</p>
-        <a class="modal-error__close" href="#">Ок</a>
+        <a class="button modal__close" href="#">Ок</a>
       </div>
 
-      <div class="modal-correct visually-hidden">
-        <b class="modal-correct__title">Ваш отзыв отправлен!</b>
-        <p class="modal-correct__subtitle">Спасибо за&nbsp;Ваше участие, Ваш отзыв уже поступил
+      <div class="modal modal--correct">
+        <b class="modal__title">Ваш отзыв отправлен!</b>
+        <p class="modal__subtitle">Спасибо за&nbsp;Ваше участие, Ваш отзыв уже поступил
           к&nbsp;нам. В&nbsp;ближайшее время мы&nbsp;опубликуем его на&nbsp;сайте.</p>
-        <a class="modal-correct__close" href="#">Закрыть окно</a>
-      </div>
+        <div class="modal__button-background">
+        <a class="button modal__close" href="#">Закрыть окно</a>
+        </div>
+        </div>
 
     </section>
   </main>
