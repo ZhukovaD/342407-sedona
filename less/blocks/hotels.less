@@ -2,7 +2,7 @@
   text-transform: uppercase;
   margin-top: 28px;
   margin-bottom: 50px;
-  background-color: #ffffff;
+  //background-color: #ffffff;
 }
 
 .hotels__header {
@@ -61,19 +61,23 @@
 @media (min-width: @desktop-width) {
   .hotels {
     margin-top: 56px;
-    margin-bottom: 33px;
+    margin-bottom: 54px;
   }
 
   .hotels__header {
-    margin-left: 180px;
-    margin-right: 180px;
+    margin-left: 100px;
+    margin-right: 100px;
   }
 
   .hotels__title {
     margin-bottom: 27px;
+    font-size: calc(@text-biggest * 1.4);
   }
 
   .hotels__description {
     padding: 0 200px;
+  }
+  .hotels__to-search {
+    width: 400px;
   }
 }
