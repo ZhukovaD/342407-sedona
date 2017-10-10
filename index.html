@@ -10,7 +10,8 @@
 <body>
 <div class="page-border">
   <header class="page-header">
-    <nav class="main-nav">
+    <nav class="main-nav main-nav--opened main-nav--nojs">
+      <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
       <ul class="main-nav__list site-list">
         <li class="site-list__item site-list__item--active">
           <a href="index.html">Главная</a>
@@ -32,7 +33,6 @@
     <a class="page-header__logo" href="index.html">
       <img class="page-header__logo-image" src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Седона">
     </a>
-    <button class="main-nav__open-menu" type="button"><img src="img/icon-menu.svg"></button>
   </header>
 
   <main class="page-main">
@@ -40,6 +40,10 @@
     <div class="main-image">
       <img class="main-image__text" src="img/text-sedona-index.svg" width="320" height="389"
             alt="Добро пожаловать в Седону!">
+      <img class="main-image__triangle" src="img/bg-intro-triangle-mobile.svg" width="320" height="50"
+            alt="">
+      <img class="main-image__triangle main-image__triangle--small" src="img/bg-intro-triangle-mobile.svg" width="620" height="50"
+           alt="">
     </div>
 
     <section class="intro">
@@ -55,6 +59,8 @@
       <h2 class="visually-hidden">Преимущества Седоны</h2>
 
       <div class="advantages__item content-item">
+        <img class="advantages__triangle" src="img/bg-triangle.svg" width="320" height="50"
+             alt="">
         <div class="advantages__wrapper">
           <header class="content-item__header">
             <h3 class="content-item__title">Настоящий городок</h3>
@@ -97,7 +103,7 @@
         </div>
       </div>
 
-      <div class="advantages__wrapper">
+      <div class="advantages__wrapper  advantages__wrapper--no-content">
         <div class="advantages__item no-content-item">
           <header class="no-content-item__header">
             <h3 class="no-content-item__title">Небольшая площадь</h3>
@@ -138,7 +144,9 @@
       <a class="hotels__to-search button" href="#">Найти гостинницу</a>
     </section>
 
+
     <section class="map">
+      <div class="map__googlemap"></div>
       <h2 class="visually-hidden">Седона на карте</h2>
     </section>
 
@@ -162,6 +170,22 @@
   </footer>
 </div>
 
+<script>
+  var navMain = document.querySelector('.main-nav');
+  var navToggle = document.querySelector('.main-nav__toggle');
+
+  navMain.classList.remove('main-nav--nojs');
+
+  navToggle.addEventListener('click', function () {
+    if (navMain.classList.contains('main-nav--closed')) {
+      navMain.classList.remove('main-nav--closed');
+      navMain.classList.add('main-nav--opened');
+    } else {
+      navMain.classList.add('main-nav--closed');
+      navMain.classList.remove('main-nav--opened');
+    }
+  });
+</script>
 </body>
 
 </html>

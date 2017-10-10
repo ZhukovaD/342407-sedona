@@ -1,18 +1,20 @@
 .page-header {
-  width: 320px;
+  width: auto;
+  max-height: 280px;
   margin: 0 auto;
   text-align: center;
-  height: 279px;
   background: #ffffff;
 }
 
-.page-header__logo-image {
-  margin-left: 57px;
+.page-header__logo {
+  position: relative;
+  z-index: 1000;
 }
 
 @media (min-width: @tablet-width) {
   .page-header {
-    width: @tablet-width;
+    position: static;
+    width: auto;
     height: 50px;
   }
 
