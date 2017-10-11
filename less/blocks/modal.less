@@ -1,7 +1,7 @@
 .modal {
   display: block;
   position: absolute;
-  width: 320px;
+  width: 100%;
   top: 885px;
   text-align: center;
   font-family: @base-font;
@@ -31,11 +31,13 @@
 .modal__close {
   padding: 16px;
   width: 150px;
+  margin: 0 auto;
   margin-bottom: 36px;
 }
 
 .modal--correct {
   top: 1215px;
+  display: none;
 }
 
 .modal--correct .modal__subtitle {
@@ -43,7 +45,7 @@
 }
 
 .modal__button-background {
-  width: 280px;
+  width: auto;
   margin: 0 auto;
   padding: 20px;
   background-color: @light-gray;
@@ -51,15 +53,12 @@
 
 .modal--correct .modal__close {
   width: 250px;
-  margin: 0;
+  margin: 0 auto;
 }
 
-//.modal--correct{
-//  display: none;
-//}
-//.modal--error{
-//  display: none;
-//}
+.modal--error {
+  display: none;
+}
 
 @media (min-width: @tablet-width) {
   .modal {

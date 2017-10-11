@@ -30,6 +30,18 @@
   border-radius: 5px;
 }
 
+.form-check__checkbox:active + .checkbox-custom::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  bottom: 10px;
+  left: 10px;
+  background: url("../img/icon-tick-op50.svg") 50% 50% no-repeat;
+  background-size: 23px;
+}
+
 .form-check__checkbox:checked + .checkbox-custom::before {
   content: "";
   display: block;
@@ -39,6 +51,14 @@
   bottom: 10px;
   left: 10px;
   background: url("../img/icon-tick.svg") 50% 50% no-repeat;
+}
+
+.checkbox-custom:hover {
+  background-color: rgb(221, 221, 221);
+}
+
+.checkbox-custom:active {
+  background-color: rgb(203, 203, 203);
 }
 
 @media (min-width: @tablet-width) {

@@ -1,3 +1,7 @@
+label {
+  position: relative;
+}
+
 .form-contact {
   margin-bottom: 18px;
 }
@@ -20,6 +24,31 @@
   font-size: @text-big;
   border: none;
   background-color: @light-gray;
+}
+
+.form-contact__mail {
+  position: absolute;
+  top: 29px;
+  right: 0;
+  padding: 18px;
+  background-color: rgb(224, 224, 224);
+}
+
+.form-contact__phone {
+  position: absolute;
+  top: 29px;
+  left: 221px;
+  padding: 19px;
+  background-color: rgb(224, 224, 224);
+}
+
+.form-contact__input:hover {
+  background-color: rgb(223, 223, 223);
+}
+
+.form-contact__input:focus {
+  background-color: #ffffff;
+  outline: 4px solid rgb(223, 223, 223);
 }
 
 .form-contact__label--desktop {
@@ -52,6 +81,18 @@
 
   .form-contact__input--tel {
     margin-bottom: 25px;
+  }
+
+  .form-contact__mail {
+    top: 33px;
+    right: 0;
+    padding: 18px;
+  }
+
+  .form-contact__phone {
+    top: 33px;
+    left: 592px;
+    padding: 18px;
   }
 }
 
@@ -90,5 +131,15 @@
 
   .form-contact__label--desktop {
     display: inline;
+  }
+
+  .form-contact__mail {
+    top: 7px;
+    right: 0;
+  }
+
+  .form-contact__phone {
+    top: 7px;
+    left: 321px;
   }
 }

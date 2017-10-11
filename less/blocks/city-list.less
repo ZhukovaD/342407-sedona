@@ -1,11 +1,12 @@
 .city-list {
   .all-lists;
-  //background-color: #ffffff;
+  background-color: #ffffff;
+  width: 270px;
+  margin: 0 auto;
   padding-left: 20px;
-  padding-right: 20px;
+  padding-right: 30px;
   padding-top: 28px;
-  padding-bottom: 25px;
-  width: 280px;
+  padding-bottom: 40px;
   text-transform: uppercase;
 }
 
@@ -55,12 +56,13 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: @tablet-width;
+    width: 100%;
+    min-width: 0;
     height: auto;
-    padding-top: 57px;
+    padding-top: 50px;
     padding-left: 0;
     padding-right: 0;
-    padding-bottom: 44px;
+    padding-bottom: 45px;
     text-align: center;
   }
 
@@ -78,6 +80,8 @@
 
   .city-list__discription {
     padding: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 
   .city-list__item--housing {
@@ -99,10 +103,11 @@
 
 @media (min-width: @desktop-width) {
   .city-list {
-    width: 1120px;
+    width: 100%;
     margin: 0 auto;
     justify-content: space-around;
     padding-bottom: 55px;
+    padding-top: 50px;
   }
 
   .city-list__title {
