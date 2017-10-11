@@ -1,18 +1,7 @@
 .advantages__item {
-  position: relative;
   font-family: @base-font;
   list-style: none;
   text-transform: uppercase;
-}
-
-.advantages__triangle {
-  position: absolute;
-  width: 100%;
-  max-height: 40px;
-  top: 0;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
 }
 
 //ГОЛУБЫЕ БЛОКИ
@@ -54,15 +43,16 @@
 
 .content-item__image--city {
   background: url("../img/main-city-mobile@1x.jpg") no-repeat;
-  background-color: #ffffff;
+  background-color: rgb(106,118,99);
   background-position: center;
   background-size: cover;
 }
 
 .content-item__image--bridge {
   background: url("../img/main-bridge-mobile@1x.jpg") no-repeat;
-  background-color: #ffffff;
+  background-color: rgb(187,89,94);
   background-position: center;
+  background-size: cover;
 }
 
 //СЕРЫЕ БЛОКИ
@@ -109,7 +99,7 @@
   }
 
   .advantages__wrapper {
-    width: @tablet-width;
+    width: 100%;
     min-width: 0;
     margin: 0 auto;
     display: flex;
@@ -177,7 +167,7 @@
 
 @media (min-width: @desktop-width) {
   .advantages__wrapper {
-    width: 1120px;
+    width: 100%;
     min-width: 0;
     margin: 0 auto;
     display: flex;

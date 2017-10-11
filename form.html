@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Форма отзыва</title>
   <link href="css/style.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/normalize.css">
+
 </head>
 <body>
 <div class="page-border">
@@ -19,20 +19,17 @@
         <li class="site-list__item">
           <a href="photo.html">Фото и видео</a>
         </li>
-        <li class="site-list__item site-list__item--nodisplay">
-          <a href="index.html"><img src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Седона"></a>
-        </li>
         <li class="site-list__item site-list__item--active">
           <a href="form.html">Форма отзыва</a>
         </li>
         <li class="site-list__item">
           <a href="#">html academy</a>
         </li>
+        <li class="site-list__item site-list__item--logo">
+          <a href="index.html"><img src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Седона"></a>
+        </li>
       </ul>
     </nav>
-    <a class="page-header__logo" href="index.html">
-      <img class="page-header__logo-image" src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Седона">
-    </a>
   </header>
 
   <main class="page-main">
@@ -102,17 +99,17 @@
             <fieldset class="feedback__fieldset form-radio">
               <legend class="feedback__legend feedback__legend--form-radio">Ваше общее впечатление:</legend>
               <label class="form-radio__item">
-                <input class="form-radio__radio" type="radio" name="radio" value="good" checked>
+                <input class="form-radio__radio visually-hidden" type="radio" name="radio" value="good" checked>
                 <span class="radio-custom"></span>
                 <span class="form-radio__label">Скорее положительное</span>
               </label>
               <label class="form-radio__item">
-                <input class="form-radio__radio" type="radio" name="radio" value="bad">
+                <input class="form-radio__radio visually-hidden" type="radio" name="radio" value="bad">
                 <span class="radio-custom"></span>
                 <span class="form-radio__label">Скорее отрицательное</span>
               </label>
               <label class="form-radio__item">
-                <input class="form-radio__radio" type="radio" name="radio" value="unknown">
+                <input class="form-radio__radio visually-hidden" type="radio" name="radio" value="unknown">
                 <span class="radio-custom"></span>
                 <span class="form-radio__label">Затрудняюсь ответить</span>
               </label>

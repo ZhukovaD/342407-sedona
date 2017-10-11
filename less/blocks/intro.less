@@ -1,5 +1,6 @@
 .intro {
   text-transform: uppercase;
+  position: relative;
 }
 
 .intro__header {
@@ -27,6 +28,7 @@
 
 .intro--small {
   border-bottom: @border;
+  padding-bottom: 13px;
 }
 
 .intro__header--small {
@@ -38,7 +40,24 @@
   line-height: 24px;
 }
 
+.intro__triangle {
+  position: absolute;
+  width: 100%;
+  bottom: -25px;
+  z-index: 1000;
+}
+
+@media (min-width: 600px) {
+  .intro__triangle {
+    bottom: -35px;
+  }
+}
+
 @media (min-width: @tablet-width) {
+  .intro__triangle {
+    display: none;
+  }
+
   .intro__header {
     width: 600px;
     padding-top: 36px;
@@ -65,7 +84,7 @@
   .intro__header--small {
     padding: 0;
     padding-top: 55px;
-    width: @tablet-width;
+    width: 500px;
     margin: 0 auto;
   }
 }
@@ -85,9 +104,19 @@
     padding: 0;
   }
 
+  .intro--small {
+    padding-bottom: 0;
+  }
+
   .intro__header--small {
     padding-top: 104px;
-    padding-bottom: 55px;
+    padding-bottom: 63px;
+    width: 500px;
+    margin: 0 auto;
+  }
+
+  .intro__header--small .intro__subtitle {
+    padding-top: 20px;
   }
 
   .intro--small .intro__title {

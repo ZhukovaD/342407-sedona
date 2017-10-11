@@ -19,7 +19,7 @@
 .main-image--small {
   width: auto;
   min-height: 158px;
-  background-color: rgba(204, 224, 236, 0.2);
+  background-color: rgb(204, 224, 236);
   background-image: url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: 60% 80%;
@@ -75,6 +75,7 @@
   }
 
   .main-image__triangle--small {
+    padding: 0;
     display: block;
     position: absolute;
     width: calc(@tablet-width - 70px);
@@ -87,7 +88,7 @@
 
 @media (min-width: @desktop-width) {
   .main-image {
-    width: 1120px;
+    width: 100%;
     min-height: 488px;
     background-size: cover;
   }

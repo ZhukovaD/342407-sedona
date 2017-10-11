@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Фото и видео</title>
   <link href="css/style.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/normalize.css">
 </head>
 <body>
 <div class="page-border">
@@ -19,20 +18,17 @@
         <li class="site-list__item site-list__item--active">
           <a href="photo.html">Фото и видео</a>
         </li>
-        <li class="site-list__item site-list__item--nodisplay">
-          <a href="index.html"><img src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Седона"></a>
-        </li>
         <li class="site-list__item">
           <a href="form.html">Форма отзыва</a>
         </li>
         <li class="site-list__item">
           <a href="#">html academy</a>
         </li>
+        <li class="site-list__item site-list__item--logo">
+          <a href="index.html"><img src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Седона"></a>
+        </li>
       </ul>
     </nav>
-    <a class="page-header__logo" href="index.html">
-      <img class="page-header__logo-image" src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Седона">
-    </a>
   </header>
 
   <main class="page-main">
@@ -62,15 +58,17 @@
           <figure class="photo__item">
             <img class="photo__img photo__img--big" src="img/photo-sunset-mobile@1x.jpg" width="280" height="280"
                   alt="Народные просторы">
-            <figcaption>
-              <p class="photo__title">Народные просторы</p>
-              <p class="photo__author">Автор фото: Борис</p>
+            <figcaption class="photo__description">
+              <div class="photo__text">
+                <p class="photo__title">Народные просторы</p>
+                <p class="photo__author">Автор фото: Борис</p>
+              </div>
+              <div class="photo__likesum">
+                <button class="photo__like" type="button"><img src="img/icon-like.svg"></button>
+                <span class="photo__sum">1350</span>
+              </div>
             </figcaption>
           </figure>
-          <div class="photo__likesum">
-            <button class="photo__like" type="button"><img src="img/icon-like.svg"></button>
-            <span class="photo__sum">1350</span>
-          </div>
         </div>
 
 
@@ -78,43 +76,49 @@
           <figure class="photo__item">
             <img class="photo__img" src="img/photo-cactus-mobile@1x.jpg" width="280" height="280"
                   alt="Местная растительность">
-            <figcaption>
-              <p class="photo__title">Местная растительность</p>
-              <p class="photo__author">Автор фото: Сергей</p>
+            <figcaption class="photo__description">
+              <div class="photo__text">
+                <p class="photo__title">Местная растительность</p>
+                <p class="photo__author">Автор фото: Сергей</p>
+              </div>
+              <div class="photo__likesum">
+                <button class="photo__like" type="button"><img src="img/icon-like.svg"></button>
+                <span class="photo__sum">143</span>
+              </div>
             </figcaption>
           </figure>
-          <div class="photo__likesum">
-            <button class="photo__like" type="button"><img src="img/icon-like.svg"></button>
-            <span class="photo__sum">143</span>
-          </div>
         </div>
 
         <div class="photo__box">
           <figure class="photo__item">
             <img class="photo__img" src="img/photo-roads-mobile@1x.jpg" width="280" height="280" alt="Дорога на север">
-            <figcaption>
-              <p class="photo__title">Дорога на север</p>
-              <p class="photo__author">Автор фото: Петр</p>
+            <figcaption class="photo__description">
+              <div class="photo__text">
+                <p class="photo__title">Дорога на север</p>
+                <p class="photo__author">Автор фото: Петр</p>
+              </div>
+              <div class="photo__likesum">
+                <button class="photo__like" type="button"><img src="img/icon-like.svg"></button>
+                <span class="photo__sum">96</span>
+              </div>
             </figcaption>
           </figure>
-          <div class="photo__likesum">
-            <button class="photo__like" type="button"><img src="img/icon-like.svg"></button>
-            <span class="photo__sum">96</span>
-          </div>
         </div>
 
         <div class="photo__box">
           <figure class="photo__item">
             <img class="photo__img" src="img/photo-bridge-mobile@1x.jpg" width="280" height="280" alt="Мост дьявола">
-            <figcaption class="photo__caption">
-              <p class="photo__title">Мост дьявола</p>
-              <p class="photo__author">Автор фото: Антон</p>
+            <figcaption class="photo__description">
+              <div class="photo__text">
+                <p class="photo__title">Мост дьявола</p>
+                <p class="photo__author">Автор фото: Антон</p>
+              </div>
+              <div class="photo__likesum">
+                <button class="photo__like" type="button"><img src="img/icon-like.svg"></button>
+                <span class="photo__sum">254</span>
+              </div>
             </figcaption>
           </figure>
-          <div class="photo__likesum">
-            <button class="photo__like" type="button"><img src="img/icon-like.svg"></button>
-            <span class="photo__sum">254</span>
-          </div>
         </div>
       </div>
     </section>
@@ -127,8 +131,25 @@
         <p class="video__subtitle">Смотрите видеопрезентацию и&nbsp;скорее
           за&nbsp;билетами, пока они не&nbsp;подорожали в&nbsp;очередной раз!</p>
       </header>
-      <video class="video__video-pleer" width="320" height="201" controls preload="metadata"
-              src="img/video-mobile@1x.jpg" poster="img/video-mobile@1x.jpg"></video>
+      <video class="video__video-pleer" width="320" height="201" preload="metadata" poster="img/video-mobile@1x.jpg"></video>
+      <div class="video__controls">
+        <div class="video__sound">
+          <div class="video__line"></div>
+          <div class="video__button video__circle"></div>
+        </div>
+        <div class="video__replay">
+          <button class="video__button"><img src="img/icon-video-replay.svg" width="17" height="17"
+                 alt="Воспроизвести снова"></button>
+        </div>
+          <div class="video__cc">
+            <button class="video__button"><img src="img/icon-video-subtitles.svg" width="33" height="33"
+                 alt="Включить субтитры"></button>
+          </div>
+          <div class="video__fullscreen">
+            <button class="video__button"><img src="img/icon-video-fullscreen.svg" width="20" height="20"
+                 alt="Развернуть на полный экран"></button>
+          </div>
+      </div>
     </section>
 
   </main>
