@@ -6,6 +6,7 @@
   <title>HTML Academy: Седона</title>
   <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
+  <script src="js/picturefill.js"></script>
 </head>
 <body>
 <div class="page-border">
@@ -26,7 +27,13 @@
           <a href="#">html academy</a>
         </li>
         <li class="site-list__item site-list__item--logo">
-          <a href="index.html"><img src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Седона"></a>
+          <a href="index.html">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
+              <img src="img/logo-sedona-mobile.svg" alt="Седона">
+            </picture>
+          </a>
         </li>
       </ul>
     </nav>

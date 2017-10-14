@@ -6,6 +6,7 @@
   <title>Фото и видео</title>
   <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
+  <script src="js/picturefill.js"></script>
 </head>
 <body>
 <div class="page-border">
@@ -26,7 +27,13 @@
           <a href="#">html academy</a>
         </li>
         <li class="site-list__item site-list__item--logo">
-          <a href="index.html"><img src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Седона"></a>
+          <a href="index.html">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
+              <img src="img/logo-sedona-mobile.svg" alt="Седона">
+            </picture>
+          </a>
         </li>
       </ul>
     </nav>
@@ -57,8 +64,12 @@
       <div class="photo__wrapper">
         <div class="photo__box photo__box--big">
           <figure class="photo__item">
-            <img class="photo__img photo__img--big" src="img/photo-sunset-mobile@1x.jpg" width="280" height="280"
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/photo-sunset-desktop@1x.jpg 1x, img/photo-sunset-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/photo-sunset-tablet@1x.jpg 1x, img/photo-sunset-tablet@2x.jpg 2x">
+              <img class="photo__img photo__img--big" src="img/photo-sunset-mobile@1x.jpg" srcset="img/photo-sunset-mobile@2x.jpg 2x"
                   alt="Народные просторы">
+            </picture>
             <figcaption class="photo__description">
               <div class="photo__text">
                 <p class="photo__title">Народные просторы</p>
@@ -75,8 +86,12 @@
 
         <div class="photo__box">
           <figure class="photo__item">
-            <img class="photo__img" src="img/photo-cactus-mobile@1x.jpg" width="280" height="280"
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/photo-cactus-desktop@1x.jpg 1x, img/photo-cactus-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/photo-cactus-tablet@1x.jpg 1x, img/photo-cactus-tablet@2x.jpg 2x">
+              <img class="photo__img" src="img/photo-cactus-mobile@1x.jpg" srcset="img/photo-cactus-mobile@2x.jpg 2x"
                   alt="Местная растительность">
+              </picture>
             <figcaption class="photo__description">
               <div class="photo__text">
                 <p class="photo__title">Местная растительность</p>
@@ -92,8 +107,13 @@
 
         <div class="photo__box">
           <figure class="photo__item">
-            <img class="photo__img" src="img/photo-roads-mobile@1x.jpg" width="280" height="280" alt="Дорога на север">
-            <figcaption class="photo__description">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/photo-roads-desktop@1x.jpg 1x, img/photo-roads-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/photo-roads-tablet@1x.jpg 1x, img/photo-roads-tablet@2x.jpg 2x">
+              <img class="photo__img" src="img/photo-roads-mobile@1x.jpg" srcset="img/photo-roads-mobile@2x.jpg 2x"
+                    alt="Дорога на север">
+            </picture>
+              <figcaption class="photo__description">
               <div class="photo__text">
                 <p class="photo__title">Дорога на север</p>
                 <p class="photo__author">Автор фото: Петр</p>
@@ -108,8 +128,13 @@
 
         <div class="photo__box">
           <figure class="photo__item">
-            <img class="photo__img" src="img/photo-bridge-mobile@1x.jpg" width="280" height="280" alt="Мост дьявола">
-            <figcaption class="photo__description">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/photo-bridge-desktop@1x.jpg 1x, img/photo-bridge-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/photo-bridge-tablet@1x.jpg 1x, img/photo-bridge-tablet@2x.jpg 2x">
+              <img class="photo__img" src="img/photo-bridge-mobile@1x.jpg" srcset="img/photo-bridge-mobile@2x.jpg 2x"
+                    alt="Мост дьявола">
+            </picture>
+              <figcaption class="photo__description">
               <div class="photo__text">
                 <p class="photo__title">Мост дьявола</p>
                 <p class="photo__author">Автор фото: Антон</p>
@@ -132,7 +157,13 @@
         <p class="video__subtitle">Смотрите видеопрезентацию и&nbsp;скорее
           за&nbsp;билетами, пока они не&nbsp;подорожали в&nbsp;очередной раз!</p>
       </header>
-      <video class="video__video-pleer" width="320" height="201" preload="metadata" poster="img/video-mobile@1x.jpg"></video>
+      <div class="video__video-pleer">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="img/video-desktop@1x.jpg 1x, img/video-desktop@2x.jpg 2x">
+          <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg 1x, img/video-tablet@2x.jpg 2x">
+          <img src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg 2x">
+        </picture>
+      </div>
       <div class="video__controls">
         <div class="video__sound">
           <div class="video__line"></div>
