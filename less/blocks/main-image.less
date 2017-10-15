@@ -45,12 +45,10 @@
 .main-image__triangle {
   display: block;
   position: absolute;
-  width: 100%;
-  bottom: -0.3px;
-}
-
-.main-image__triangle--small {
-  display: none;
+  bottom: -13px;
+  left: 50%;
+  margin-right: 50%;
+  transform: translate(-50%, -50%);
 }
 
 @media (min-width: @tablet-width) {
@@ -86,20 +84,7 @@
   }
 
   .main-image__triangle {
-    width: 100%;
-    left: 0;
-    bottom: -27px;
-  }
-
-  .main-image__triangle--small {
-    padding: 0;
-    display: block;
-    position: absolute;
-    width: calc(@tablet-width - 70px);
-    bottom: -30px;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
+    bottom: -29px;
   }
 }
 
