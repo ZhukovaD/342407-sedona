@@ -4,7 +4,6 @@
   font-size: @text-small;
   text-align: left;
   margin: 0;
-  margin-right: 5px;
 }
 
 .copyright__link {
@@ -12,11 +11,19 @@
   width: 28px;
   display: inline-block;
   vertical-align: middle;
-  background-image: url("../img/logo-htmlacademy.svg");
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
   margin: 0;
-  margin-left: 5px;
+}
+
+.copyright__logo {
+  fill: rgb(0, 0, 0);
+}
+
+.copyright__logo:hover {
+  fill: @base-color;
+}
+
+.copyright__logo:active {
+  fill: rgb(174, 174, 174);
 }
 
 @media (min-width: @tablet-width) {

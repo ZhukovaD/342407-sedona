@@ -26,6 +26,7 @@
 
 .photo__author {
   margin: 0;
+  padding-bottom: 3px;
 }
 
 .photo__sum {
@@ -37,6 +38,20 @@
   background: none;
   padding: 0;
   padding-right: 10px;
+  margin-top: 0;
+  cursor: pointer;
+}
+
+.photo-like-icon {
+  fill: rgb(153, 153, 153);
+}
+
+.photo-like-icon:hover {
+  fill: rgba(153, 153, 153, 0.7);
+}
+
+.photo-like-icon:active {
+  fill: rgba(153, 153, 153, 0.4);
 }
 
 @media (min-width: @tablet-width) {
@@ -141,5 +156,17 @@
 
   .photo__likesum {
     padding: 20px;
+  }
+
+  .photo-like-icon {
+    fill: rgb(255, 255, 255);
+  }
+
+  .photo-like-icon:hover {
+    fill: rgba(255, 255, 255, 0.8);
+  }
+
+  .photo-like-icon:active {
+    fill: rgba(255, 255, 255, 0.5);
   }
 }

@@ -46,7 +46,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   position: absolute;
-  bottom: -105px;
+  bottom: -102px;
   width: 280px;
   left: 50%;
   margin-right: -50%;
@@ -89,8 +89,8 @@
 
 .video__cc {
   background-color: @light-gray;
-  padding-top: 20px;
-  padding-bottom: 10px;
+  padding-top: 15px;
+  padding-bottom: 5px;
   flex: 1;
   text-align: center;
   align-self: flex-end;
@@ -104,6 +104,18 @@
   padding-top: 20px;
   padding-bottom: 10px;
   padding-right: 17px;
+}
+
+.video__icon {
+  fill: rgb(75, 84, 93);
+}
+
+.video__icon:hover {
+  fill: rgb(38, 38, 38);
+}
+
+.video__icon:active {
+  fill: rgb(180, 180, 180);
 }
 
 @media (min-width: @tablet-width) {
@@ -136,7 +148,7 @@
     flex-wrap: nowrap;
     padding-top: 15px;
     padding-bottom: 15px;
-    bottom: 0;
+    bottom: 12px;
     background-color: rgba(0, 0, 0, 0.6);
   }
 
@@ -169,6 +181,26 @@
     text-align: right;
     padding-right: 35px;
   }
+
+  .video__icon {
+    fill: rgba(255, 255, 255, 1);
+  }
+
+  .video__icon:hover {
+    fill: rgba(255, 255, 255, 0.7);
+  }
+
+  .video__icon:active {
+    fill: rgba(255, 255, 255, 0.2);
+  }
+
+  .video__circle:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+
+  .video__circle:active {
+    background-color: rgba(255, 255, 255, 1);
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -186,7 +218,7 @@
   .video__controls {
     width: calc(1120px / 1.5 + 2px);
     margin: 0 auto;
-    bottom: 35px;
+    bottom: 38px;
     padding-top: 12px;
     padding-bottom: 12px;
   }
