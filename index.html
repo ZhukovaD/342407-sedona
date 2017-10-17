@@ -153,11 +153,7 @@
       <a class="hotels__to-search button" href="#">Найти гостинницу</a>
     </section>
 
-
-    <section class="map">
-      <div class="map__googlemap"></div>
-      <h2 class="visually-hidden">Седона на карте</h2>
-    </section>
+    <div id="map"></div>
 
   </main>
 
@@ -195,6 +191,26 @@
     }
   });
 </script>
+<script>
+  function initMap() {
+    var uluru = {lat: 34.869497, lng: -111.760186};
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 7,
+      scrollwheel: false,
+      center: uluru,
+      gestureHandling: 'cooperative'
+    });
+
+    var image = 'img/icon-map-marker.svg';
+    var castomMarker = new google.maps.Marker({
+      position: uluru,
+      map: map,
+      icon: image
+    });
+
+  }
+</script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBNV7mDOB3qUox956WV1IyapFcxzUxu_Cs&callback=initMap"></script>
 </body>
 
 </html>
