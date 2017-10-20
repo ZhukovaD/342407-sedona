@@ -4,10 +4,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Фото и видео</title>
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet">
   <script src="js/picturefill.js"></script>
 </head>
 <body>
+
+<link rel=«preload» href="build/fonts/ptsans.woff2" as="font">
+<link rel=«preload» href="build/fonts/ptsansbold.woff2" as="font">
+<link rel=«preload» href="build/css/style.min.css" as="style">
 
 <div style="display: none">
   <include src="build/img/sprite.svg"></include>
@@ -85,7 +89,7 @@
                 <p class="photo__author">Автор фото: Борис</p>
               </div>
               <div class="photo__likesum">
-                <button class="photo__like" type="button"><svg class="photo-like-icon" width="22" height="20"><use xlink:href="#sprite-icon-like"></use></svg></button>
+                <button class="photo__like" type="button"><svg class="photo-like-icon" width="22" height="20"><use xlink:href="#sprite-icon-like"></use></svg><span class="visually-hidden">Нравится</span></button>
                 <span class="photo__sum">1350</span>
               </div>
             </figcaption>
@@ -111,7 +115,7 @@
                 <p class="photo__author">Автор фото: Сергей</p>
               </div>
               <div class="photo__likesum">
-                <button class="photo__like" type="button"><svg class="photo-like-icon" width="22" height="20"><use xlink:href="#sprite-icon-like"></use></svg></button>
+                <button class="photo__like" type="button"><svg class="photo-like-icon" width="22" height="20"><use xlink:href="#sprite-icon-like"></use></svg><span class="visually-hidden">Нравится</span></button>
                 <span class="photo__sum">143</span>
               </div>
             </figcaption>
@@ -136,7 +140,7 @@
                 <p class="photo__author">Автор фото: Петр</p>
               </div>
               <div class="photo__likesum">
-                <button class="photo__like" type="button"><svg class="photo-like-icon" width="22" height="20"><use xlink:href="#sprite-icon-like"></use></svg></button>
+                <button class="photo__like" type="button"><svg class="photo-like-icon" width="22" height="20"><use xlink:href="#sprite-icon-like"></use></svg><span class="visually-hidden">Нравится</span></button>
                 <span class="photo__sum">96</span>
               </div>
             </figcaption>
@@ -161,7 +165,7 @@
                 <p class="photo__author">Автор фото: Антон</p>
               </div>
               <div class="photo__likesum">
-                <button class="photo__like" type="button"><svg class="photo-like-icon" width="22" height="20"><use xlink:href="#sprite-icon-like"></use></svg></button>
+                <button class="photo__like" type="button"><svg class="photo-like-icon" width="22" height="20"><use xlink:href="#sprite-icon-like"></use></svg><span class="visually-hidden">Нравится</span></button>
                 <span class="photo__sum">254</span>
               </div>
             </figcaption>
@@ -186,7 +190,7 @@
 
           <source media="(min-width: 1200px)" srcset="img/video-desktop@1x.jpg 1x, img/video-desktop@2x.jpg 2x">
           <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg 1x, img/video-tablet@2x.jpg 2x">
-          <img src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg 2x">
+          <img src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg 2x" alt="Превью видео">
         </picture>
       </div>
       <div class="video__controls">
@@ -195,13 +199,13 @@
           <div class="video__button video__circle"></div>
         </div>
         <div class="video__replay">
-          <button class="video__button"><svg class="video__icon" width="20" height="20"><use xlink:href="#sprite-icon-video-replay"></use></svg></button>
+          <button class="video__button"><svg class="video__icon" width="20" height="20"><use xlink:href="#sprite-icon-video-replay"></use></svg><span class="visually-hidden">Воспроизвести еще раз</span></button>
         </div>
           <div class="video__cc">
-            <button class="video__button"><svg class="video__icon" width="30" height="30"><use xlink:href="#sprite-icon-video-subtitles"></use></svg></button>
+            <button class="video__button"><svg class="video__icon" width="30" height="30"><use xlink:href="#sprite-icon-video-subtitles"></use></svg><span class="visually-hidden">Показать/скрыть субтитры</span></button>
           </div>
           <div class="video__fullscreen">
-            <button class="video__button"><svg class="video__icon" width="20" height="20"><use xlink:href="#sprite-icon-video-fullscreen"></use></svg></button>
+            <button class="video__button"><svg class="video__icon" width="20" height="20"><use xlink:href="#sprite-icon-video-fullscreen"></use></svg><span class="visually-hidden">Развернуть на весь экран</span></button>
           </div>
       </div>
     </section>
@@ -213,34 +217,21 @@
       <b class="page-footer__hashtag">#visitsedona</b>
 
       <div class="page-footer__social social">
-        <a class="button social__link social__link--twitter" href="#"></a>
-        <a class="button social__link social__link--facebook" href="#"></a>
-        <a class="button social__link social__link--youtube" href="#"></a>
+        <a class="button social__link social__link--twitter" href="#"><span class="visually-hidden">Мы в Твиттере</span></a>
+        <a class="button social__link social__link--facebook" href="#"><span class="visually-hidden">Мы в Фейсбуке</span></a>
+        <a class="button social__link social__link--youtube" href="#"><span class="visually-hidden">Мы в Ютубе</span></a>
       </div>
 
       <div class="page_footer__copyright copyright">
         <p class="copyright__text">Разработано</p>
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"><svg class="copyright__logo" width="30" height="50"><use xlink:href="#sprite-logo-htmlacademy"></use></svg></a>
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"><svg class="copyright__logo" width="30" height="50"><use xlink:href="#sprite-logo-htmlacademy"></use></svg><span class="visually-hidden">HTMLAcademy</span></a>
       </div>
     </div>
   </footer>
 </div>
-<script>
-  var navMain = document.querySelector('.main-nav');
-  var navToggle = document.querySelector('.main-nav__toggle');
 
-  navMain.classList.remove('main-nav--nojs');
+<script src="js/menu.js"></script>
 
-  navToggle.addEventListener('click', function () {
-    if (navMain.classList.contains('main-nav--closed')) {
-      navMain.classList.remove('main-nav--closed');
-      navMain.classList.add('main-nav--opened');
-    } else {
-      navMain.classList.add('main-nav--closed');
-      navMain.classList.remove('main-nav--opened');
-    }
-  });
-</script>
 </body>
 
 </html>

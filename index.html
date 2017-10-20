@@ -4,10 +4,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Седона</title>
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet">
   <script src="js/picturefill.js"></script>
 </head>
 <body>
+
+<link rel=«preload» href="build/fonts/ptsans.woff2" as="font">
+<link rel=«preload» href="build/fonts/ptsansbold.woff2" as="font">
+<link rel=«preload» href="build/css/style.min.css" as="style">
 
 <div style="display: none">
   <include src="build/img/sprite.svg"></include>
@@ -161,54 +165,21 @@
       <b class="page-footer__hashtag">#visitsedona</b>
 
       <div class="page-footer__social social">
-        <a class="button social__link social__link--twitter" href="#"></a>
-        <a class="button social__link social__link--facebook" href="#"></a>
-        <a class="button social__link social__link--youtube" href="#"></a>
+        <a class="button social__link social__link--twitter" href="#"><span class="visually-hidden">Мы в Твиттере</span></a>
+        <a class="button social__link social__link--facebook" href="#"><span class="visually-hidden">Мы в Фейсбуке</span></a>
+        <a class="button social__link social__link--youtube" href="#"><span class="visually-hidden">Мы в Ютубе</span></a>
       </div>
 
       <div class="page_footer__copyright copyright">
         <p class="copyright__text">Разработано</p>
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"><svg class="copyright__logo" width="40" height="60"><use xlink:href="#sprite-logo-htmlacademy"></use></svg></a>
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"><svg class="copyright__logo" width="30" height="50"><use xlink:href="#sprite-logo-htmlacademy"></use></svg><span class="visually-hidden">HTMLAcademy</span></a>
       </div>
     </div>
   </footer>
 </div>
 
-<script>
-  var navMain = document.querySelector('.main-nav');
-  var navToggle = document.querySelector('.main-nav__toggle');
-
-  navMain.classList.remove('main-nav--nojs');
-
-  navToggle.addEventListener('click', function () {
-    if (navMain.classList.contains('main-nav--closed')) {
-      navMain.classList.remove('main-nav--closed');
-      navMain.classList.add('main-nav--opened');
-    } else {
-      navMain.classList.add('main-nav--closed');
-      navMain.classList.remove('main-nav--opened');
-    }
-  });
-</script>
-<script>
-  function initMap() {
-    var uluru = {lat: 34.869497, lng: -111.760186};
-    var map = new google.maps.Map(document.getElementById('map'), {
-      zoom: 7,
-      scrollwheel: false,
-      center: uluru,
-      gestureHandling: 'cooperative'
-    });
-
-    var image = 'img/icon-map-marker.svg';
-    var castomMarker = new google.maps.Marker({
-      position: uluru,
-      map: map,
-      icon: image
-    });
-
-  }
-</script>
+<script src="js/menu.js"></script>
+<script src="js/map.js" defer></script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBNV7mDOB3qUox956WV1IyapFcxzUxu_Cs&callback=initMap"></script>
 </body>
 

@@ -15,6 +15,9 @@ var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
 var server = require("browser-sync").create();
 var run = require("run-sequence");
+var htmlmin = require('gulp-htmlmin');
+var uglify = require('gulp-uglify');
+var pump = require('pump');
 
 gulp.task("clean", function () {
   return del("build");
@@ -59,7 +62,9 @@ gulp.task("html", function () {
     .pipe(posthtml([
       include()
     ]))
-    .pipe(gulp.dest("build"));
+    .pipe(gulp.dest("build"))
+    .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(gulp.dest('build'));
 });
 
 gulp.task("images", function () {
@@ -92,6 +97,16 @@ gulp.task("serve", function () {
   gulp.watch("*.html", ["html"]);
 });
 
+gulp.task('compress', function (cb) {
+  pump([
+      gulp.src('js/*.js'),
+      uglify(),
+      gulp.dest('build/js')
+    ],
+    cb
+  );
+});
+
 gulp.task("build", function (done) {
   run(
     "clean",
@@ -99,6 +114,7 @@ gulp.task("build", function (done) {
     "style",
     "sprite",
     "html",
+    "compress",
     done
   );
 });
