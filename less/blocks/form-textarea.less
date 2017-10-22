@@ -3,16 +3,18 @@ textarea::placeholder {
 }
 
 .form-textarea {
-  margin-bottom: 45px;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 50px;
 }
 
 .form-textarea__textarea {
-  height: 120px;
+  height: 130px;
   width: 240px;
   border: none;
   font-weight: bold;
-  font-size: @text-big;
-  padding: 20px;
+  font-size: 16px;
+  padding: 15px 20px;
   line-height: 25px;
   background-color: @light-gray;
 }
@@ -31,17 +33,12 @@ textarea::placeholder {
     width: calc(@tablet-width - 120px);
     border-top: @border;
     margin: 0;
-  }
-
-  .feedback__legend--form-textarea {
-    text-align: center;
-    padding-left: 65px;
-    padding-right: 65px;
-    margin-bottom: 40px;
+    margin-bottom: 10px;
   }
 
   .form-textarea__textarea {
     height: 120px;
+    padding: 20px 20px;
     min-width: 94%;
   }
 }
@@ -49,10 +46,6 @@ textarea::placeholder {
 @media (min-width: @desktop-width) {
   .form-textarea {
     width: calc(1120px - 220px);
-  }
-
-  .feedback__legend--form-textarea {
-    margin-bottom: 30px;
   }
 
   .form-textarea__textarea {

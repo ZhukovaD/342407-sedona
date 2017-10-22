@@ -1,8 +1,9 @@
 .feedback {
+  border-top: @border;
   position: relative;
   min-width: 320px;
   margin: 0 auto;
-  padding-bottom: 38px;
+  padding-bottom: 34px;
   background-color: #ffffff;
 }
 
@@ -27,10 +28,19 @@
   font-size: @text-big;
   text-transform: uppercase;
   text-align: center;
-  padding: 20px;
+  padding: 19px;
+  padding-bottom: 20px;
 }
 
-.feedback-button {
+.feedback__legend--form-check {
+  padding-bottom: 16px;
+}
+
+.feedback__legend--form-textarea {
+  padding-bottom: 16px;
+}
+
+.feedback__button {
   width: 280px;
   min-height: 57px;
   text-transform: uppercase;
@@ -51,6 +61,8 @@ input::placeholder {
     margin: 0 auto;
     padding-top: 48px;
     padding-bottom: 0;
+    border-top: none;
+
   }
 
   .feedback__wrapper {
@@ -81,9 +93,17 @@ input::placeholder {
   .feedback__legend--form-person {
     text-align: left;
     padding: 21px 0 56px 0;
+
   }
 
-  .button__wrapper {
+  .feedback__legend--form-textarea {
+    text-align: center;
+    padding-left: 65px;
+    padding-right: 65px;
+    margin-bottom: 40px;
+  }
+
+  .feedback__button-wrapper {
     display: flex;
     width: 100%;
     margin: 50px auto;
@@ -91,11 +111,11 @@ input::placeholder {
     justify-content: space-between;
   }
 
-  .feedback-button {
+  .feedback__button {
     width: 325px;
-    min-height: 57px;
+    min-height: 50px;
     text-transform: uppercase;
-    padding: 10px;
+    padding: 8px;
     margin: 0;
   }
 
@@ -123,11 +143,11 @@ input::placeholder {
     margin-top: 13px;
   }
 
-  .button__wrapper {
+  .feedback__button-wrapper {
     margin-bottom: 55px;
   }
 
-  .feedback-button {
+  .feedback__button {
     width: 450px;
     height: 20px;
     padding: 0;
@@ -137,4 +157,9 @@ input::placeholder {
   .feedback__pole {
     margin-top: 13px;
   }
+
+  .feedback__legend--form-textarea {
+    margin-bottom: 30px;
+  }
 }
+

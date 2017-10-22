@@ -1,3 +1,8 @@
+.photo {
+  padding-top: 10px;
+  border-top: @border;
+}
+
 .photo__box {
   width: 320px;
   margin: 0 auto;
@@ -7,14 +12,14 @@
 .photo__item {
   width: 280px;
   margin: 0 auto;
-  padding-top: 20px;
+  padding-top: 22px;
   padding-left: 20px;
   padding-right: 20px;
 }
 
 .photo__description {
-  padding-top: 7px;
-  padding-bottom: 17px;
+  padding-top: 5px;
+  padding-bottom: 14px;
 }
 
 .photo__title {
@@ -85,7 +90,9 @@
     width: auto;
     text-align: left;
     padding: 0;
+    padding-top: 0px;
     margin: 0;
+    overflow: hidden;
   }
 
   .photo__box--big {
@@ -94,7 +101,8 @@
 
   .photo__description {
     display: flex;
-    padding: 10px 20px;
+    padding: 6px 20px;
+    padding-bottom: 8px;
     justify-content: space-between;
     min-width: 0;
   }
@@ -130,6 +138,7 @@
 
   .photo__img {
     height: 250px;
+    width: auto;
     vertical-align: bottom;
   }
 

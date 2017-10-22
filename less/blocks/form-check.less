@@ -1,16 +1,26 @@
 .form-check {
+  display: flex;
+  flex-direction: row;
   margin-bottom: 30px;
+  min-width: 0;
+  width: 280px;
 }
 
-.form-check__label {
-  font-weight: bold;
-  font-size: @text-big;
-  text-transform: none;
+.form-check__item-wrapper {
+  display: flex;
+  flex-direction: column;
 }
 
 .form-check__item {
-  display: inline-block;
-  margin-bottom: 22px;
+  display: flex;
+  margin-bottom: 27px;
+}
+
+.form-check__label {
+  align-self: center;
+  font-weight: bold;
+  font-size: @text-big;
+  text-transform: none;
 }
 
 .form-check__item:last-child {
@@ -18,7 +28,7 @@
 }
 
 //Стилизация псевдоэлемента - чекбокса
-.checkbox-custom {
+.form-check__input {
   display: inline-block;
   vertical-align: middle;
   margin-right: 23px;
@@ -30,7 +40,7 @@
   border-radius: 5px;
 }
 
-.form-check__checkbox:active + .checkbox-custom::after {
+.form-check__checkbox:active + .form-check__input::after {
   content: "";
   display: block;
   position: absolute;
@@ -42,7 +52,7 @@
   background-size: 23px;
 }
 
-.form-check__checkbox:checked + .checkbox-custom::before {
+.form-check__checkbox:checked + .form-check__input::before {
   content: "";
   display: block;
   position: absolute;
@@ -53,11 +63,12 @@
   background: url("../img/icon-tick.svg") 50% 50% no-repeat;
 }
 
-.checkbox-custom:hover {
+.form-check__input:hover,
+.form-check__input:focus {
   background-color: rgb(221, 221, 221);
 }
 
-.checkbox-custom:active {
+.form-check__input:active {
   background-color: rgb(203, 203, 203);
 }
 
@@ -65,7 +76,7 @@
   .form-check {
     width: calc(@tablet-width - 120px);
     margin-top: 20px;
-    margin-bottom: 0;
+    margin-bottom: 5px;
     border-top: @border;
   }
 
@@ -76,42 +87,30 @@
   }
 
   .form-check__item-wrapper {
-    display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
-    width: 540px;
-    margin: 15px auto;
+    justify-content: space-between;
+    width: 460px;
+    margin: 36px auto;
     margin-bottom: 0;
+    align-items: baseline;
   }
 
   .form-check__item {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-right: 20px;
-    margin-left: 55px;
+    min-width: 200px;
   }
 
   .form-check__item--1 {
     order: -3;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-right: 40px;
-    margin-left: 35px;
+    margin-bottom: 35px;
   }
 
   .form-check__item--2 {
     order: -1;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-right: 40px;
-    margin-left: 35px;
   }
 
   .form-check__item--3 {
     order: -2;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-right: 40px;
-    margin-left: 35px;
   }
 }
 
@@ -128,9 +127,7 @@
   }
 
   .form-check__item-wrapper {
-    display: flex;
-    flex-wrap: no-wrap;
-    width: inherit;
+    flex-wrap: nowrap;
     margin: 40px 0;
     justify-content: space-between;
   }

@@ -1,16 +1,27 @@
 .form-radio {
+  display: flex;
+  flex-direction: row;
   margin-bottom: 29px;
+  min-width: 0;
+  width: 280px;
 }
 
-.form-radio__label {
-  font-weight: bold;
-  font-size: @text-big;
-  text-transform: none;
+.form-radio__item-wrapper {
+  display: flex;
+  flex-direction: column;
 }
 
 .form-radio__item {
-  display: inline-block;
+  display: flex;
+  flex-direction: row;
   margin-bottom: 17px;
+}
+
+.form-radio__label {
+  align-self: center;
+  font-weight: bold;
+  font-size: @text-big;
+  text-transform: none;
 }
 
 .form-radio__item:last-child {
@@ -18,7 +29,7 @@
 }
 
 //Стилизация псевдоэлемента - радио-кнопки
-.radio-custom {
+.form-radio__input {
   display: inline-block;
   vertical-align: middle;
   margin-right: 23px;
@@ -29,7 +40,7 @@
   cursor: pointer;
 }
 
-.form-radio__radio:active + .radio-custom::after {
+.form-radio__radio:active + .form-radio__input::after {
   content: "";
   display: block;
   position: absolute;
@@ -40,7 +51,7 @@
   background-color: rgb(147, 147, 147);
 }
 
-.form-radio__radio:checked + .radio-custom::before {
+.form-radio__radio:checked + .form-radio__input::before {
   content: "";
   display: block;
   position: absolute;
@@ -51,17 +62,18 @@
   background-color: rgb(38, 38, 38);
 }
 
-.radio-custom,
-.form-radio__radio:checked + .radio-custom::before,
-.form-radio__radio:active + .radio-custom::after {
+.form-radio__input,
+.form-radio__radio:checked + .form-radio__input::before,
+.form-radio__radio:active + .form-radio__input::after {
   border-radius: 50%;
 }
 
-.radio-custom:hover {
+.form-radio__input:hover,
+.form-radio__input:focus {
   background-color: rgb(221, 221, 221);
 }
 
-.radio-custom:active {
+.form-radio__input:active {
   background-color: rgb(203, 203, 203);
 }
 

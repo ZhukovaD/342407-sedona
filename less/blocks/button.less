@@ -4,13 +4,14 @@
   cursor: pointer;
   background-color: @base-color;
   font-family: @base-font;
-  font-size: @text-big;
+  font-size: @text-biggest;
   font-weight: bold;
   color: #ffffff;
   text-decoration: none;
+  letter-spacing: 1px;
   text-align: center;
   display: block;
-  width: 240px;
+  width: 248px;
   margin: auto;
 }
 
@@ -21,4 +22,9 @@
 .button:active {
   background-color: @color-active;
   color: rgba(255, 255, 255, 0.3);
+}
+
+.button:disabled {
+  background-color: rgb(233, 233, 233);
+  color: #ffffff;
 }

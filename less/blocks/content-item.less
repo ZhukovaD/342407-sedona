@@ -7,8 +7,12 @@
 .content-item__header {
   width: 280px;
   margin: 0 auto;
-  padding-top: 35px;
+  padding-top: 40px;
   text-align: center;
+}
+
+.content-item:first-of-type .content-item__header {
+  padding-top: 64px;
 }
 
 .content-item__title {
@@ -31,7 +35,7 @@
 
 .content-item__image {
   margin: 0;
-  height: 265px;
+  height: 260px;
   width: auto;
 }
 
@@ -66,12 +70,17 @@
 @media (min-width: @tablet-width) {
   .content-item__header {
     margin: 0;
-    width: 190px;
+    width: 195px;
+    padding: 0;
     padding-top: 45px;
-    padding-bottom: 0;
-    padding-right: 30px;
     padding-left: 30px;
+    padding-right: 30px;
     text-align: center;
+  }
+
+  .content-item:first-of-type .content-item__header {
+    padding-top: 45px;
+    width: 195px;
   }
 
   .content-item__image {

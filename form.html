@@ -75,20 +75,22 @@
           <div class="feedback__box feedback__box--person">
             <fieldset class="feedback__fieldset form-person">
               <legend class="feedback__legend feedback__legend--form-person">Представьтесь:</legend>
-              <label><span class="form-person__label">Имя<sup>*</sup>:</span>
+              <div class="form-person__item-wrapper">
+              <label class="form-person__form-block"><span class="form-person__label">Имя<sup>*</sup>:</span>
                 <input class="form-person__input form-person__input--name" type="text" name="name" placeholder="Петр"
                         autocomplete="off" value="" autofocus required>
               </label>
 
-              <label><span class="form-person__label">Фамилия<sup>*</sup>:</span>
+              <label class="form-person__form-block"><span class="form-person__label">Фамилия<sup>*</sup>:</span>
                 <input class="form-person__input form-person__input--surname" type="text" name="surname"
                         placeholder="Иванов" autocomplete="off" required>
               </label>
 
-              <label><span class="form-person__label">Отчество:</span>
+              <label class="form-person__form-block"><span class="form-person__label">Отчество:</span>
                 <input class="form-person__input form-person__input--patronymic" type="text" name="patronymic"
                         placeholder="Александрович" autocomplete="off">
               </label>
+              </div>
             </fieldset>
           </div>
 
@@ -96,13 +98,13 @@
             <fieldset class="feedback__fieldset form-contact">
               <legend class="feedback__legend feedback__legend--form-contact">Контактная информация:</legend>
               <div class="form-contact__item-wrapper">
-                <label><span class="form-contact__label form-contact__label--tablet">Контактный телефон<sup>*</sup>:</span>
-                  <span class="form-contact__label form-contact__label--desktop">Телефон<sup>*</sup>:</span>
+                <label class="form-contact__form-block"><span class="form-contact__label form-contact__label--full">Контактный телефон<sup>*</sup>:</span>
+                  <span class="form-contact__label form-contact__label--short">Телефон<sup>*</sup>:</span>
                   <input class="form-contact__input form-contact__input--tel" type="tel" name="tel"
                           placeholder="Введите телефон" autocomplete="off" required>
                   <svg class="form-contact__phone" width="20" height="20"><use xlink:href="#sprite-icon-phone"></use></svg>
                 </label>
-                <label><span class="form-contact__label">Электронная почта<sup>*</sup>:</span>
+                <label class="form-contact__form-block"><span class="form-contact__label">Электронная почта<sup>*</sup>:</span>
                   <input class="form-contact__input form-contact__input--email" type="email" name="email"
                           placeholder="Введите e-mail" autocomplete="off" required>
                   <svg class="form-contact__mail" width="20" height="20"><use xlink:href="#sprite-icon-mail"></use></svg>
@@ -114,21 +116,23 @@
           <div class="feedback__box feedback__box--radio">
             <fieldset class="feedback__fieldset form-radio">
               <legend class="feedback__legend feedback__legend--form-radio">Ваше общее впечатление:</legend>
+              <div class="form-radio__item-wrapper">
               <label class="form-radio__item">
                 <input class="form-radio__radio visually-hidden" type="radio" name="radio" value="good" checked>
-                <span class="radio-custom"></span>
+                <span class="form-radio__input"></span>
                 <span class="form-radio__label">Скорее положительное</span>
               </label>
               <label class="form-radio__item">
                 <input class="form-radio__radio visually-hidden" type="radio" name="radio" value="bad">
-                <span class="radio-custom"></span>
+                <span class="form-radio__input"></span>
                 <span class="form-radio__label">Скорее отрицательное</span>
               </label>
               <label class="form-radio__item">
                 <input class="form-radio__radio visually-hidden" type="radio" name="radio" value="unknown">
-                <span class="radio-custom"></span>
+                <span class="form-radio__input"></span>
                 <span class="form-radio__label">Затрудняюсь ответить</span>
               </label>
+              </div>
             </fieldset>
           </div>
 
@@ -138,22 +142,22 @@
               <div class="form-check__item-wrapper">
                 <label class="form-check__item form-check__item--1">
                   <input class="form-check__checkbox visually-hidden" type="checkbox" name="bridge" checked>
-                  <span class="checkbox-custom"></span>
+                  <span class="form-check__input"></span>
                   <span class="form-check__label">Мост Дьявола</span>
                 </label>
                 <label class="form-check__item form-check__item--2">
                   <input class="form-check__checkbox visually-hidden" type="checkbox" name="park" checked>
-                  <span class="checkbox-custom"></span>
+                  <span class="form-check__input"></span>
                   <span class="form-check__label">Слайд-парк</span>
                 </label>
                 <label class="form-check__item form-check__item--3">
                   <input class="form-check__checkbox visually-hidden" type="checkbox" name="mountain">
-                  <span class="checkbox-custom"></span>
+                  <span class="form-check__input"></span>
                   <span class="form-check__label">Гора-Колокол</span>
                 </label>
                 <label class="form-check__item">
                   <input class="form-check__checkbox visually-hidden" type="checkbox" name="rock" checked>
-                  <span class="checkbox-custom"></span>
+                  <span class="form-check__input"></span>
                   <span class="form-check__label">Красные скалы</span>
                 </label>
               </div>
@@ -169,8 +173,8 @@
             </fieldset>
           </div>
 
-          <div class="button__wrapper">
-            <input class="button feedback-button" type="submit" value="Отправить отзыв">
+          <div class="feedback__button-wrapper">
+            <input class="button feedback__button" type="submit" value="Отправить отзыв">
             <p class="feedback__pole"><sup>*</sup>&#160;&#8212;&#160;Обязательные поля</p>
           </div>
         </div>
@@ -206,9 +210,9 @@
         <a class="button social__link social__link--youtube" href="#"><span class="visually-hidden">Мы в Ютубе</span></a>
       </div>
 
-      <div class="page_footer__copyright copyright">
+      <div class="page-footer__copyright copyright">
         <p class="copyright__text">Разработано</p>
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"><svg class="copyright__logo" width="30" height="50"><use xlink:href="#sprite-logo-htmlacademy"></use></svg><span class="visually-hidden">HTMLAcademy</span></a>
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"><svg class="copyright__logo" width="27" height="42"><use xlink:href="#sprite-logo-htmlacademy"></use></svg><span class="visually-hidden">HTMLAcademy</span></a>
       </div>
     </div>
   </footer>
