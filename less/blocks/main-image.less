@@ -90,23 +90,21 @@
 
 @media (min-width: @desktop-width) {
   .main-image {
-    width: 100%;
-    min-height: 488px;
+    min-height: 519px;
     background-size: cover;
-
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/bg-back-desktop@2x.jpg");
     }
   }
 
   .main-image__text {
-    width: 435px;
+    width: 460px;
     margin: 0 auto;
-    padding-top: 70px;
+    padding-top: 79px;
   }
 
   .main-image--small {
-    min-height: 285px;
+    min-height: 301px;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/bg-back-desktop@2x.jpg");
@@ -114,7 +112,12 @@
   }
 
   .main-image__text--small {
-    width: 430px;
-    padding-top: 100px;
+    width: 460px;
+    padding-top: 102px;
+  }
+
+  .main-image__triangle{
+    width: @desktop-width;
+    bottom: -29px;
   }
 }

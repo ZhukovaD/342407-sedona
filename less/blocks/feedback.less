@@ -81,17 +81,19 @@ input::placeholder {
   }
 
   .feedback__legend {
-    font-size: calc(@text-biggest * 1.05);
+    font-size: @text-biggest;
   }
 
   .feedback__legend--form-radio {
     text-align: left;
-    padding: 21px 0 62px 0;
+    padding: 0;
+    margin-bottom: 16px;
   }
 
   .feedback__legend--form-person {
     text-align: left;
-    padding: 21px 0 56px 0;
+    padding: 0;
+    margin-bottom: 10px;
   }
 
   .feedback__legend--form-textarea {
@@ -99,6 +101,18 @@ input::placeholder {
     padding-left: 65px;
     padding-right: 65px;
     margin-bottom: 40px;
+  }
+
+  .feedback__legend--form-check {
+    margin: 0 120px;
+    padding: 0;
+    margin-bottom: 6px;
+  }
+
+  .feedback__legend--form-contact {
+    padding-left: 65px;
+    padding-right: 65px;
+    margin-bottom: 6px;
   }
 
   .feedback__button-wrapper {
@@ -128,7 +142,7 @@ input::placeholder {
 
 @media (min-width: @desktop-width) {
   .feedback {
-    width: calc(1120px - 220px);
+    width: calc(@desktop-width - 238px);
     margin: 0 auto;
     padding-top: 0;
   }
@@ -142,21 +156,33 @@ input::placeholder {
   }
 
   .feedback__button-wrapper {
-    margin-bottom: 55px;
+    margin-bottom: 65px;
   }
 
   .feedback__button {
-    width: 450px;
-    height: 20px;
-    padding: 0;
+    width: 480px;
     margin: 0;
+    padding: 16px;
   }
 
   .feedback__pole {
-    margin-top: 13px;
+    padding-top: 17px;
+    margin: 0;
   }
 
   .feedback__legend--form-textarea {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
+  }
+
+  .feedback__legend--form-check {
+    margin: 0 300px;
+  }
+
+  .feedback__legend--form-contact {
+    margin-bottom: 40px;
+  }
+
+  .feedback__legend--form-person {
+    margin-bottom: 15px;
   }
 }

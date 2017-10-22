@@ -13,7 +13,7 @@ textarea::placeholder {
   width: 240px;
   border: none;
   font-weight: bold;
-  font-size: 16px;
+  font-size: @text-big;
   padding: 15px 20px;
   line-height: 25px;
   background-color: @light-gray;
@@ -45,12 +45,13 @@ textarea::placeholder {
 
 @media (min-width: @desktop-width) {
   .form-textarea {
-    width: calc(1120px - 220px);
+    width: calc(@desktop-width - 238px);
+    min-width: 0;
   }
 
   .form-textarea__textarea {
-    height: 110px;
-    width: calc(1120px - 220px - 40px);
-    font-size: calc(@text-small * 1.05);
+    height: 119px;
+    width: 920px;
+    margin: 0;
   }
 }

@@ -90,7 +90,6 @@
     width: auto;
     text-align: left;
     padding: 0;
-    padding-top: 0;
     margin: 0;
     overflow: hidden;
   }
@@ -120,6 +119,10 @@
 }
 
 @media (min-width: @desktop-width) {
+  .photo{
+    border-top: none;
+  }
+
   .photo__wrapper {
     width: 100%;
     margin-top: 0;
@@ -131,19 +134,19 @@
   }
 
   .photo__box {
-    width: 33.33333%;
+    width: 33.33334%;
     color: #ffffff;
     padding: 0;
   }
 
   .photo__img {
-    height: 250px;
+    height: auto;
     width: auto;
     vertical-align: bottom;
   }
 
   .photo__img--big {
-    height: 377px;
+    height: 400px;
   }
 
   .photo__box--big {
@@ -155,16 +158,17 @@
     bottom: 0;
     left: 0;
     padding: 0;
+    padding-top: 7px;
     width: 100%;
     background: rgba(0, 0, 0, 0.4);
   }
 
   .photo__text {
-    padding: 20px;
+    padding: 6px 21px;
   }
 
   .photo__likesum {
-    padding: 20px;
+    padding: 21px;
   }
 
   .photo-like-icon {

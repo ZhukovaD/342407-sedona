@@ -32,7 +32,7 @@
   min-height: 45px;
   width: 100%;
   font-weight: bold;
-  font-size: 16px;
+  font-size: @text-big;
   border: none;
   background-color: @light-gray;
 }
@@ -59,29 +59,14 @@
   .form-person__form-block {
     width: 100%;
   }
-
-  .feedback__legend--form-person {
-    padding: 0;
-    margin-bottom: 10px;
-  }
 }
 
 @media (min-width: @desktop-width) {
   .form-person {
-    //Рассчитывается ширина контейнера: ((внутренний контейнер) разделить пополам - левый отступ - рамку)
-    width: calc((1120px - 220px) / 2 - 72px - 1px);
-    padding-left: 72px;
-    padding-top: 47px;
+    width: calc((@desktop-width - 238px) / 2 - 80px - 1px);
+    padding-left: 80px;
+    padding-top: 40px;
     border-left: @border;
-  }
-
-  .feedback__legend--form-person {
-    margin-bottom: 5px;
-  }
-
-  .form-person__input {
-    padding: 4px;
-    padding-left: 20px;
-    background-color: rgba(233, 254, 222, 0.8);
+    margin-bottom: 9px;
   }
 }
