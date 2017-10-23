@@ -1,5 +1,4 @@
 .photo {
-  padding-top: 10px;
   border-top: @border;
 }
 
@@ -40,6 +39,7 @@
 
 .photo__like {
   border: none;
+  outline: none;
   background: none;
   padding: 0;
   padding-right: 10px;
@@ -60,6 +60,10 @@
 }
 
 @media (min-width: @tablet-width) {
+  .photo {
+    border-top:none;
+  }
+
   .photo__wrapper {
     width: calc(@tablet-width - 120px);
     margin: 0 auto;
@@ -101,7 +105,7 @@
   .photo__description {
     display: flex;
     padding: 6px 20px;
-    padding-bottom: 8px;
+    padding-bottom: 10px;
     justify-content: space-between;
     min-width: 0;
   }
@@ -111,10 +115,19 @@
   }
 
   .photo__likesum {
-    padding: 0;
-    flex: 1;
-    align-self: center;
-    text-align: right;
+    display: flex;
+    margin-right: 0;
+    align-items: center;
+    padding-right: 9px;
+    padding-bottom: 5px;
+  }
+
+  .photo__box:nth-child(3) .photo__likesum{
+    padding-right: 16px;
+  }
+
+  .photo__box:first-child .photo__likesum{
+    padding-right: 0;
   }
 }
 
@@ -158,17 +171,24 @@
     bottom: 0;
     left: 0;
     padding: 0;
-    padding-top: 7px;
     width: 100%;
     background: rgba(0, 0, 0, 0.4);
   }
 
   .photo__text {
-    padding: 6px 21px;
+    padding: 12px 21px;
   }
 
   .photo__likesum {
-    padding: 21px;
+    padding-right: 29px;
+  }
+
+  .photo__box:nth-child(3) .photo__likesum{
+    padding-right: 36px;
+  }
+
+  .photo__box:first-child .photo__likesum{
+    padding-right: 20px;
   }
 
   .photo-like-icon {

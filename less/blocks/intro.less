@@ -27,14 +27,27 @@
 }
 
 .intro--small {
-  padding-bottom: 3px;
+  padding-bottom: 1px;
+}
+
+.intro--photo {
+  padding-bottom: 12px;
 }
 
 .intro__header--small {
   width: 280px;
   margin: 0 auto;
   padding: 0;
-  padding-top: 26px;
+  padding-top: 27px;
+  padding-bottom: 15px;
+  line-height: 24px;
+}
+
+.intro__header--photo {
+  width: 280px;
+  margin: 0 auto;
+  padding: 0;
+  padding-top: 27px;
   padding-bottom: 15px;
   line-height: 24px;
 }
@@ -46,20 +59,22 @@
   z-index: 1000;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 400px) {
   .intro__triangle {
     bottom: -35px;
   }
 }
 
-@media (min-width: @tablet-width) {
+@media (min-width: 550px) {
   .intro__triangle {
     display: none;
   }
+}
 
+@media (min-width: @tablet-width) {
   .intro__header {
-    width: 600px;
-    padding-top: 32px;
+    width: 700px;
+    padding-top: 35px;
     padding-bottom: 49px;
   }
 
@@ -73,19 +88,36 @@
   }
 
   .intro--small {
+    margin: 0 auto;
     border: none;
+    padding-bottom: 5px;
   }
 
   .intro--small .intro__title {
     font-size: 30px;
-    margin-bottom: 17px;
+    margin-bottom: 18px;
   }
 
   .intro__header--small {
     padding: 0;
-    padding-top: 50px;
-    width: 560px;
+    padding-top: 55px;
+    width: 570px;
     margin: 0 auto;
+  }
+
+  .intro--photo{
+    padding-bottom: 16px;
+  }
+
+  .intro__header--photo {
+    padding: 0;
+    padding-top: 55px;
+    width: 570px;
+    margin: 0 auto;
+  }
+
+  .intro--photo .intro__title {
+    font-size: 30px;
   }
 }
 
@@ -110,8 +142,8 @@
 
   .intro__header--small {
     padding-top: 114px;
-    padding-bottom: 60px;
-    width: 560px;
+    padding-bottom: 59px;
+    width: 650px;
     margin: 0 auto;
   }
 
@@ -122,6 +154,21 @@
   .intro--small .intro__title {
     padding: 0;
     margin: 0;
-    padding-bottom: 11px;
+    padding-bottom: 12px;
+  }
+
+  .intro__header--photo{
+    padding-top: 93px;
+    padding-bottom: 55px;
+    width: 430px;
+  }
+
+  .intro--photo .intro__title{
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .intro--photo .intro__subtitle {
+    padding-top: 13px;
   }
 }
